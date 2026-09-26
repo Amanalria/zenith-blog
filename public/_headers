@@ -1,0 +1,64 @@
+# ==============================================================================
+# Cloudflare Pages Edge Performance & Security Headers
+# ==============================================================================
+
+# 1. Static Assets (Images, WebP, SVG, Fonts): 1-Year Immutable Edge Cache
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+  Access-Control-Allow-Origin: *
+
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# 2. AI Manifests, Sitemaps & Feeds: 1-Hour Edge Cache with S-Maxage
+/.well-known/*
+  Cache-Control: public, max-age=3600, s-maxage=86400, stale-while-revalidate=86400
+  Access-Control-Allow-Origin: *
+  Content-Type: application/json; charset=utf-8
+
+/ai-catalog.json
+  Cache-Control: public, max-age=3600, s-maxage=86400, stale-while-revalidate=86400
+  Access-Control-Allow-Origin: *
+  Content-Type: application/json; charset=utf-8
+
+/ard.json
+  Cache-Control: public, max-age=3600, s-maxage=86400, stale-while-revalidate=86400
+  Access-Control-Allow-Origin: *
+  Content-Type: application/json; charset=utf-8
+
+/sitemap.xml
+  Cache-Control: public, max-age=3600, s-maxage=86400, stale-while-revalidate=86400
+  Content-Type: application/xml; charset=utf-8
+
+/sitemap-index.xml
+  Cache-Control: public, max-age=3600, s-maxage=86400, stale-while-revalidate=86400
+  Content-Type: application/xml; charset=utf-8
+
+/robots.txt
+  Cache-Control: public, max-age=86400, s-maxage=604800, stale-while-revalidate=86400
+  Content-Type: text/plain; charset=utf-8
+
+/llms.txt
+  Cache-Control: public, max-age=86400, s-maxage=604800, stale-while-revalidate=86400
+  Content-Type: text/plain; charset=utf-8
+
+/rss.xml
+  Cache-Control: public, max-age=3600, s-maxage=86400, stale-while-revalidate=86400
+  Content-Type: application/xml; charset=utf-8
+
+# 3. HTML Pages: Stale-While-Revalidate Edge Acceleration for Instant Mobile FCP
+/*
+  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload

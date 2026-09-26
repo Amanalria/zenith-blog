@@ -6,9 +6,10 @@ import IconClock from './icons/IconClock.astro';
 
 interface Props {
   post: CollectionEntry<'blog'>;
+  priority?: boolean;
 }
 
-const { post } = Astro.props;
+const { post, priority = false } = Astro.props;
 const slug = getPostSlug(post);
 const { title, description, pubDate, category, readTime, image, imageAlt } = post.data;
 const postUrl = `/${slug}`;
@@ -25,7 +26,8 @@ const categoryUrl = `/category/${category.toLowerCase().replace(/[^a-z0-9]/g, '-
           alt={imageAlt || title}
           width="800"
           height="450"
-          loading="lazy"
+          loading={priority ? "eager" : "lazy"}
+          fetchpriority={priority ? "high" : "auto"}
           decoding="async"
           class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-300 ease-out"
         />

@@ -42,8 +42,8 @@ const nextUrl = totalPages > 1 ? '/page/2/' : undefined;
           </div>
         ) : (
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10">
-            {pagePosts.map((post) => (
-              <PostCard post={post} />
+            {pagePosts.map((post, index) => (
+              <PostCard post={post} priority={index < 2} />
             ))}
           </div>
         )}

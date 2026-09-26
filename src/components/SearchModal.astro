@@ -113,22 +113,30 @@ const searchIndex = allPosts.map((post) => ({
     renderResults(e.target.value);
   });
 
-  // Global triggers
-  document.querySelectorAll('[data-search-trigger]').forEach(btn => {
-    btn.addEventListener('click', openSearch);
-  });
+  // Global triggers initialized during idle time
+  const initSearch = () => {
+    document.querySelectorAll('[data-search-trigger]').forEach(btn => {
+      btn.addEventListener('click', openSearch);
+    });
 
-  container?.addEventListener('click', (e) => {
-    if (e.target === container) closeSearch();
-  });
+    container?.addEventListener('click', (e) => {
+      if (e.target === container) closeSearch();
+    });
 
-  window.addEventListener('keydown', (e) => {
-    if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
-      e.preventDefault();
-      openSearch();
-    }
-    if (e.key === 'Escape' && container?.classList.contains('opacity-100')) {
-      closeSearch();
-    }
-  });
+    window.addEventListener('keydown', (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        openSearch();
+      }
+      if (e.key === 'Escape' && container?.classList.contains('opacity-100')) {
+        closeSearch();
+      }
+    });
+  };
+
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(initSearch);
+  } else {
+    setTimeout(initSearch, 100);
+  }
 </script>

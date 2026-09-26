@@ -6,25 +6,40 @@
   },
   "entries": [
     {
-      "identifier": "urn:ai:tgmovies.in:resource:llms-context",
-      "displayName": "TG Movies LLMs Context and Film Archive",
-      "type": "text/markdown",
+      "identifier": "urn:air:tgmovies.in:skills:film-editorial-guide",
+      "displayName": "TG Movies Editorial Film Guide",
+      "type": "text/markdown; profile=\"urn:air:agent-skills\"",
       "url": "https://tgmovies.in/llms.txt",
-      "description": "Standardized markdown archive providing verified movie reviews, box office numbers, cast and crew details, and entertainment analyses."
+      "description": "Verified Hollywood movie release schedules, cast details, and box office tracking intelligence.",
+      "representativeQueries": [
+        "latest Hollywood movie release dates and cast details",
+        "verified box office collection reports and movie budgets",
+        "in-depth cinema analysis and film reviews"
+      ]
     },
     {
-      "identifier": "urn:ai:tgmovies.in:feed:rss",
-      "displayName": "TG Movies Syndication Feed",
-      "type": "application/rss+xml",
-      "url": "https://tgmovies.in/rss.xml",
-      "description": "Real-time entertainment article syndication feed formatted for autonomous AI consumption."
+      "identifier": "urn:air:tgmovies.in:agent:cinema-discovery-agent",
+      "displayName": "TG Movies Cinema Discovery Agent",
+      "type": "application/agent-card+json",
+      "url": "https://tgmovies.in/ai-catalog.json",
+      "description": "Autonomous discovery agent for movie reviews, ratings, release tracking, and entertainment research.",
+      "representativeQueries": [
+        "find verified movie reviews and ratings",
+        "explore upcoming blockbuster cinema guides",
+        "search movies by genre category and release status"
+      ]
     },
     {
-      "identifier": "urn:ai:tgmovies.in:sitemap:xml",
-      "displayName": "TG Movies Multimodal XML Sitemap",
-      "type": "application/xml",
-      "url": "https://tgmovies.in/sitemap.xml",
-      "description": "Comprehensive XML sitemap declaring active movie review URLs and multimodal ImageObject visual assets."
+      "identifier": "urn:air:tgmovies.in:catalog:ai-registry-manifest",
+      "displayName": "TG Movies AI Registry Catalog",
+      "type": "application/ai-catalog+json",
+      "url": "https://tgmovies.in/.well-known/ai-catalog.json",
+      "description": "Machine-readable catalog of entertainment knowledge resources and discovery endpoints.",
+      "representativeQueries": [
+        "movie database discovery endpoints",
+        "cinema syndication feeds for AI agents",
+        "entertainment metadata index"
+      ]
     }
   ]
 }
