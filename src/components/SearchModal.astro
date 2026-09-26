@@ -1,0 +1,134 @@
+---
+import { getCollection } from 'astro:content';
+import { getPostSlug, formatDate } from '../utils/posts';
+import IconSearch from './icons/IconSearch.astro';
+
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const searchIndex = allPosts.map((post) => ({
+  title: post.data.title,
+  description: post.data.description,
+  category: post.data.category,
+  date: formatDate(post.data.pubDate),
+  slug: `/${getPostSlug(post)}`,
+}));
+---
+
+<!-- Search Modal Backdrop & Dialog -->
+<div
+  id="search-modal-container"
+  class="fixed inset-0 z-50 flex items-start justify-center pt-16 sm:pt-24 px-4 bg-slate-900/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-200"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Search Articles"
+>
+  <div
+    id="search-modal-card"
+    class="w-full max-w-xl rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-2xl overflow-hidden scale-95 transition-transform duration-200"
+  >
+    <!-- Search Input Header -->
+    <div class="flex items-center gap-3 px-4 py-3.5 border-b border-slate-100 dark:border-slate-800">
+      <IconSearch class="w-5 h-5 text-slate-400 shrink-0" />
+      <input
+        id="search-input"
+        type="search"
+        placeholder="Type to search articles, topics, or keywords..."
+        autocomplete="off"
+        class="w-full bg-transparent text-slate-900 dark:text-white placeholder-slate-400 text-sm focus:outline-none"
+      />
+      <kbd class="hidden sm:inline-block px-1.5 py-0.5 text-[10px] font-mono font-semibold text-slate-400 bg-slate-100 dark:bg-slate-800 rounded border border-slate-200 dark:border-slate-700">
+        ESC
+      </kbd>
+    </div>
+
+    <!-- Results Container -->
+    <div id="search-results" class="max-h-80 overflow-y-auto p-2 divide-y divide-slate-100 dark:divide-slate-800/60">
+      <div id="search-empty" class="py-8 text-center text-xs text-slate-400">
+        Type a query to search publications...
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline define:vars={{ searchIndex }}>
+  const container = document.getElementById('search-modal-container');
+  const card = document.getElementById('search-modal-card');
+  const input = document.getElementById('search-input');
+  const results = document.getElementById('search-results');
+  const empty = document.getElementById('search-empty');
+
+  function openSearch() {
+    container?.classList.remove('opacity-0', 'pointer-events-none');
+    container?.classList.add('opacity-100', 'pointer-events-auto');
+    card?.classList.remove('scale-95');
+    card?.classList.add('scale-100');
+    setTimeout(() => input?.focus(), 50);
+  }
+
+  function closeSearch() {
+    container?.classList.remove('opacity-100', 'pointer-events-auto');
+    container?.classList.add('opacity-0', 'pointer-events-none');
+    card?.classList.remove('scale-100');
+    card?.classList.add('scale-95');
+    if (input) input.value = '';
+    renderResults('');
+  }
+
+  function renderResults(query) {
+    if (!results) return;
+    const cleanQuery = query.trim().toLowerCase();
+    
+    if (!cleanQuery) {
+      results.innerHTML = '<div class="py-8 text-center text-xs text-slate-400">Type a query to search publications...</div>';
+      return;
+    }
+
+    const matches = searchIndex.filter(item => 
+      item.title.toLowerCase().includes(cleanQuery) ||
+      item.description.toLowerCase().includes(cleanQuery) ||
+      item.category.toLowerCase().includes(cleanQuery)
+    );
+
+    if (matches.length === 0) {
+      results.innerHTML = `<div class="py-8 text-center text-xs text-slate-400">No articles found matching "${cleanQuery}"</div>`;
+      return;
+    }
+
+    results.innerHTML = matches.map(item => `
+      <a href="${item.slug}" class="block p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/60 transition-colors group">
+        <div class="flex items-center gap-2 mb-1">
+          <span class="text-[10px] font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400">${item.category}</span>
+          <span class="text-[10px] text-slate-400">• ${item.date}</span>
+        </div>
+        <div class="text-sm font-semibold text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">
+          ${item.title}
+        </div>
+        <div class="text-xs text-slate-500 line-clamp-1 mt-0.5">
+          ${item.description}
+        </div>
+      </a>
+    `).join('');
+  }
+
+  input?.addEventListener('input', (e) => {
+    renderResults(e.target.value);
+  });
+
+  // Global triggers
+  document.querySelectorAll('[data-search-trigger]').forEach(btn => {
+    btn.addEventListener('click', openSearch);
+  });
+
+  container?.addEventListener('click', (e) => {
+    if (e.target === container) closeSearch();
+  });
+
+  window.addEventListener('keydown', (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+      e.preventDefault();
+      openSearch();
+    }
+    if (e.key === 'Escape' && container?.classList.contains('opacity-100')) {
+      closeSearch();
+    }
+  });
+</script>

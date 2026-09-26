@@ -1,0 +1,34 @@
+---
+import type { MarkdownHeading } from 'astro';
+import IconBookOpen from './icons/IconBookOpen.astro';
+
+interface Props {
+  headings: MarkdownHeading[];
+}
+
+const { headings } = Astro.props;
+const filteredHeadings = headings.filter((h) => h.depth > 1 && h.depth <= 3);
+---
+
+{filteredHeadings.length > 0 && (
+  <nav class="my-8 p-5 rounded-lg border border-slate-200 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-900/40 backdrop-blur-sm">
+    <div class="flex items-center gap-2 mb-3 pb-2 border-b border-slate-200 dark:border-slate-800">
+      <IconBookOpen class="w-4 h-4 text-sky-600 dark:text-sky-400" />
+      <h2 class="text-xs font-bold uppercase tracking-wider text-slate-800 dark:text-slate-200">
+        Table of Contents
+      </h2>
+    </div>
+    <ul class="space-y-2 text-sm">
+      {filteredHeadings.map((heading) => (
+        <li class={`${heading.depth === 3 ? 'ml-4' : 'font-medium'}`}>
+          <a
+            href={`#${heading.slug}`}
+            class="text-slate-600 dark:text-slate-400 hover:text-sky-600 dark:hover:text-sky-400 hover:underline transition-colors block py-0.5"
+          >
+            {heading.text}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+)}

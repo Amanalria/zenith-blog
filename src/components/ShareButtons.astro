@@ -1,0 +1,83 @@
+---
+import IconCopy from './icons/IconCopy.astro';
+import IconTwitter from './icons/IconTwitter.astro';
+import IconLinkedin from './icons/IconLinkedin.astro';
+
+interface Props {
+  title: string;
+  url: string;
+}
+
+const { title, url } = Astro.props;
+const encodedTitle = encodeURIComponent(title);
+const encodedUrl = encodeURIComponent(url);
+
+const twitterShare = `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`;
+const linkedinShare = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`;
+const whatsappShare = `https://api.whatsapp.com/send?text=${encodedTitle}%20${encodedUrl}`;
+---
+
+<div class="my-6 pt-6 border-t border-slate-200 dark:border-slate-800 flex flex-wrap items-center justify-between gap-4">
+  <span class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+    Share Publication
+  </span>
+  <div class="flex items-center gap-2">
+    <button
+      id="copy-link-btn"
+      data-url={url}
+      class="p-2 rounded-md border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-sky-600 dark:hover:text-sky-400 hover:border-sky-500/30 transition-all text-xs flex items-center gap-1.5"
+      title="Copy link to clipboard"
+    >
+      <IconCopy class="w-3.5 h-3.5" />
+      <span id="copy-btn-text" class="hidden sm:inline">Copy</span>
+    </button>
+    <a
+      href={twitterShare}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="p-2 rounded-md border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-black dark:hover:text-white transition-all text-xs flex items-center gap-1.5"
+      title="Share on X"
+    >
+      <IconTwitter class="w-3.5 h-3.5" />
+      <span class="hidden sm:inline">Post</span>
+    </a>
+    <a
+      href={linkedinShare}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="p-2 rounded-md border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-sky-700 transition-all text-xs flex items-center gap-1.5"
+      title="Share on LinkedIn"
+    >
+      <IconLinkedin class="w-3.5 h-3.5" />
+      <span class="hidden sm:inline">Share</span>
+    </a>
+    <a
+      href={whatsappShare}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="p-2 rounded-md border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-emerald-500 transition-all text-xs flex items-center gap-1.5"
+      title="Share on WhatsApp"
+    >
+      <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+      </svg>
+    </a>
+  </div>
+</div>
+
+<script is:inline>
+  const copyBtn = document.getElementById('copy-link-btn');
+  const copyText = document.getElementById('copy-btn-text');
+  copyBtn?.addEventListener('click', async () => {
+    const url = copyBtn.getAttribute('data-url') || window.location.href;
+    try {
+      await navigator.clipboard.writeText(url);
+      if (copyText) copyText.textContent = 'Copied!';
+      setTimeout(() => {
+        if (copyText) copyText.textContent = 'Copy';
+      }, 2000);
+    } catch (e) {
+      console.error(e);
+    }
+  });
+</script>

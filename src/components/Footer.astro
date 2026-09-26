@@ -1,0 +1,80 @@
+---
+import IconRss from './icons/IconRss.astro';
+import IconShield from './icons/IconShield.astro';
+import { siteConfig } from '../config/site';
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="mt-auto border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 py-12 transition-colors">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+      <!-- Col 1: Brand & Editorial Mission -->
+      <div class="md:col-span-2 space-y-3">
+        <a href="/" class="inline-block">
+          {siteConfig.logoImage ? (
+            <img src={siteConfig.logoImage} alt={siteConfig.name} class="h-7 w-auto object-contain" />
+          ) : (
+            <span class="font-extrabold text-lg tracking-tight text-slate-900 dark:text-white">
+              {siteConfig.name}<span class="text-sky-600">.</span>
+            </span>
+          )}
+        </a>
+        <p class="text-xs text-slate-500 dark:text-slate-400 max-w-md leading-relaxed">
+          {siteConfig.description}
+        </p>
+        <div class="flex items-center gap-2 text-[11px] text-slate-500 dark:text-slate-400">
+          <IconShield class="w-3.5 h-3.5 text-sky-500" />
+          <span>Independent editorial publication • 100% verified research</span>
+        </div>
+      </div>
+
+      <!-- Col 2: Navigation -->
+      <div>
+        <h3 class="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-3">
+          Topics
+        </h3>
+        <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-400">
+          {siteConfig.categories.map((cat) => (
+            <li>
+              <a href={`/category/${cat.slug}`} class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">
+                {cat.name}
+              </a>
+            </li>
+          ))}
+          <li><a href="/rss.xml" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">RSS Feed</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Mandatory AdSense Legal & Compliance -->
+      <div>
+        <h3 class="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-3">
+          Legal & Compliance
+        </h3>
+        <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-400">
+          {siteConfig.legalLinks.map((link) => (
+            <li>
+              <a href={link.href} class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">
+                {link.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="border-t border-slate-200 dark:border-slate-800 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 dark:text-slate-400 gap-4">
+      <div>
+        © {currentYear} {siteConfig.name}. All rights reserved.
+      </div>
+      <div class="flex items-center gap-4 text-xs">
+        <a href="/privacy-policy" class="hover:underline">Privacy</a>
+        <span>•</span>
+        <a href="/terms" class="hover:underline">Terms</a>
+        <span>•</span>
+        <a href="/contact" class="hover:underline">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>

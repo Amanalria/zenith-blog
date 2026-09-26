@@ -1,0 +1,57 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostCard from '../../components/PostCard.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import IconArrowLeft from '../../components/icons/IconArrowLeft.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  
+  // Extract unique normalized categories
+  const categories = [...new Set(posts.map((p) => p.data.category))];
+
+  return categories.map((cat) => {
+    const slug = cat.toLowerCase().replace(/[^a-z0-9]/g, '-');
+    const filteredPosts = posts.filter((p) => p.data.category === cat);
+    return {
+      params: { category: slug },
+      props: { categoryName: cat, posts: filteredPosts },
+    };
+  });
+}
+
+interface Props {
+  categoryName: string;
+  posts: CollectionEntry<'blog'>[];
+}
+
+const { categoryName, posts } = Astro.props;
+---
+
+<BaseLayout
+  title={`${categoryName} Publications - Zenith Edge Journal`}
+  description={`Browse technical articles, guides, and architecture analysis on ${categoryName}.`}
+>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 md:py-14">
+    <div class="mb-8">
+      <a href="/" class="inline-flex items-center gap-1.5 text-xs text-slate-500 hover:text-sky-600 mb-4 transition-colors">
+        <IconArrowLeft class="w-3.5 h-3.5" /> Back to All Articles
+      </a>
+      <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+        Category: <span class="text-sky-600 dark:text-sky-400">{categoryName}</span>
+      </h1>
+      <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">
+        Showing {posts.length} {posts.length === 1 ? 'publication' : 'publications'} filed under this discipline.
+      </p>
+    </div>
+
+    <AdSlot format="banner" slotId="cat-top-banner" />
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 my-10">
+      {posts.map((post) => (
+        <PostCard post={post} />
+      ))}
+    </div>
+  </div>
+</BaseLayout>

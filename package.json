@@ -1,0 +1,22 @@
+{
+  "name": "edge-blog",
+  "version": "1.0.0",
+  "description": "Ultra-fast AdSense-optimized modern sharp blog on Cloudflare",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev --host 0.0.0.0 --port 9091",
+    "build": "astro build",
+    "preview": "astro preview --host 0.0.0.0 --port 9091"
+  },
+  "dependencies": {
+    "@astrojs/rss": "^4.0.19",
+    "@astrojs/sitemap": "^3.7.4",
+    "@astrojs/tailwind": "^6.0.2",
+    "astro": "^7.3.5",
+    "lucide-astro": "^0.556.0",
+    "tailwindcss": "^3.4.19"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.16"
+  }
+}

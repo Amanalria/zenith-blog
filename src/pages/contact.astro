@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import IconShield from '../components/icons/IconShield.astro';
+---
+
+<BaseLayout
+  title="Contact Us - Zenith Edge Journal"
+  description="Contact the editorial team at Zenith Edge Journal for inquiries, corrections, and editorial feedback."
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-12 md:py-16">
+    <div class="border-b border-slate-200 dark:border-slate-800 pb-8 mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+        Contact Editorial
+      </h1>
+      <p class="text-base text-slate-600 dark:text-slate-400 mt-2">
+        We respond to all technical queries and editorial submissions within 24 to 48 business hours.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+      <div class="md:col-span-7">
+        <form class="space-y-4" onsubmit="event.preventDefault(); alert('Message received! Our team will follow up via email.');">
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5">
+              Full Name
+            </label>
+            <input
+              type="text"
+              required
+              placeholder="e.g. Alex Rivera"
+              class="w-full px-3.5 py-2.5 rounded-md border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"
+            />
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5">
+              Email Address
+            </label>
+            <input
+              type="email"
+              required
+              placeholder="alex@domain.com"
+              class="w-full px-3.5 py-2.5 rounded-md border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"
+            />
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5">
+              Inquiry Subject
+            </label>
+            <select
+              class="w-full px-3.5 py-2.5 rounded-md border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"
+            >
+              <option>Technical Question / Peer Review</option>
+              <option>Editorial Correction</option>
+              <option>Licensing & Syndication</option>
+              <option>General Feedback</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5">
+              Message Content
+            </label>
+            <textarea
+              rows="5"
+              required
+              placeholder="Describe your inquiry in detail..."
+              class="w-full px-3.5 py-2.5 rounded-md border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full sm:w-auto px-8 py-3 rounded-md bg-sky-600 hover:bg-sky-500 text-white font-semibold text-sm transition-colors shadow-sm"
+          >
+            Send Inquiry
+          </button>
+        </form>
+      </div>
+
+      <div class="md:col-span-5 space-y-6">
+        <div class="sharp-card rounded-lg p-6 bg-white dark:bg-slate-900">
+          <h3 class="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-3">
+            Direct Communications
+          </h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+            For urgent peer reviews or technical corrections:
+          </p>
+          <div class="text-xs font-mono text-sky-600 dark:text-sky-400 bg-slate-50 dark:bg-slate-800 p-2.5 rounded border border-slate-200 dark:border-slate-700">
+            editorial@zenith-journal.io
+          </div>
+        </div>
+
+        <div class="sharp-card rounded-lg p-6 bg-white dark:bg-slate-900">
+          <h3 class="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-3 flex items-center gap-1.5">
+            <IconShield class="w-3.5 h-3.5 text-emerald-500" /> Response Commitment
+          </h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+            All submitted corrections are logged and reviewed against official technical standards and RFC specifications.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

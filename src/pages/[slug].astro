@@ -1,0 +1,31 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import BlogPostLayout from '../layouts/BlogPostLayout.astro';
+import { getPostSlug, getRelatedPosts } from '../utils/posts';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  
+  return posts.map((post) => {
+    // Custom edit slug takes precedence over default filename slug!
+    const slug = getPostSlug(post);
+    return {
+      params: { slug },
+      props: { post, allPosts: posts },
+    };
+  });
+}
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+  allPosts: CollectionEntry<'blog'>[];
+}
+
+const { post, allPosts } = Astro.props;
+const { Content, headings } = await render(post);
+const relatedPosts = getRelatedPosts(post, allPosts, 3);
+---
+
+<BlogPostLayout post={post} headings={headings} relatedPosts={relatedPosts}>
+  <Content />
+</BlogPostLayout>

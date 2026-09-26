@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-main: #f8fafc;
+    --bg-card: #ffffff;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --accent: #0284c7;
+    --accent-hover: #0369a1;
+  }
+
+  .dark {
+    --bg-main: #090d16;
+    --bg-card: #111827;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --border-color: #1f293d;
+    --accent: #38bdf8;
+    --accent-hover: #0ea5e9;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #0284c7;
+    color: #ffffff;
+  }
+}
+
+/* Sharp modern utilities */
+.sharp-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sharp-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* Ad container with zero CLS layout reserve */
+.ad-slot-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(148, 163, 184, 0.05);
+  border: 1px dashed var(--border-color);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.ad-label {
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-bottom: 4px;
+}

@@ -1,0 +1,51 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostCard from '../../components/PostCard.astro';
+import Sidebar from '../../components/Sidebar.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import Pagination from '../../components/Pagination.astro';
+import { siteConfig } from '../../config/site';
+
+export async function getStaticPaths({ paginate }: any) {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  const sortedPosts = posts.sort(
+    (a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+  );
+  
+  return paginate(sortedPosts, { pageSize: siteConfig.postsPerPage || 10 });
+}
+
+const { page } = Astro.props;
+const prevUrl = page.currentPage === 2 ? '/' : page.url.prev;
+---
+
+<BaseLayout
+  title={`${siteConfig.siteTitle} - Page ${page.currentPage}`}
+  description={siteConfig.description}
+>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-6 md:py-10">
+    <AdSlot format="banner" slotId="home-top-banner" />
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start my-4">
+      <main class="lg:col-span-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10">
+          {page.data.map((post: any) => (
+            <PostCard post={post} />
+          ))}
+        </div>
+
+        <Pagination
+          currentPage={page.currentPage}
+          totalPages={page.lastPage}
+          prevUrl={prevUrl}
+          nextUrl={page.url.next}
+        />
+      </main>
+
+      <div class="mt-8 lg:mt-0 lg:col-span-4 lg:sticky lg:top-24">
+        <Sidebar />
+      </div>
+    </div>
+  </div>
+</BaseLayout>

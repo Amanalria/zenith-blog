@@ -1,0 +1,153 @@
+---
+import { getCollection } from 'astro:content';
+import { getPostSlug, formatDate } from '../utils/posts';
+import AdSlot from './AdSlot.astro';
+import commentsData from '../data/comments.json';
+
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const sortedPosts = allPosts.sort(
+  (a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+);
+
+const trendingPosts = sortedPosts.slice(0, 5);
+
+// Count posts per category
+const categoryCounts = allPosts.reduce((acc, post) => {
+  const cat = post.data.category;
+  acc[cat] = (acc[cat] || 0) + 1;
+  return acc;
+}, {} as Record<string, number>);
+
+const categories = Object.keys(categoryCounts).map(cat => ({
+  name: cat,
+  slug: cat.toLowerCase().replace(/[^a-z0-9]/g, '-'),
+  count: categoryCounts[cat]
+}));
+
+// Recent 5 Comments for sidebar
+const recentComments = commentsData.slice(0, 5);
+---
+
+<aside class="space-y-8">
+  <!-- Ad Slot (Only activates when active=true with real ads) -->
+  <AdSlot format="rectangle" slotId="sidebar-top-ad" class="my-0" />
+
+  <!-- Widget 1: Trending Now (With Post Thumbnail Image + Rank + Sharp styling) -->
+  <div>
+    <div class="border-b-2 border-slate-200 dark:border-slate-800 pb-2 mb-4">
+      <h3 class="font-extrabold text-[13px] uppercase tracking-wider text-slate-900 dark:text-white relative">
+        Trending Now
+        <span class="absolute -bottom-[10px] left-0 w-12 h-[2px] bg-sky-600"></span>
+      </h3>
+    </div>
+
+    <!-- Ranked Trending Posts with Images -->
+    <div class="divide-y divide-slate-100 dark:divide-slate-800/80">
+      {trendingPosts.map((post, idx) => {
+        const slug = getPostSlug(post);
+        return (
+          <a href={`/${slug}`} class="flex items-start gap-3 py-3 group first:pt-1 last:pb-1">
+            <!-- Rank Badge (Sharp rectangular, no round) -->
+            <span class={`w-5 h-5 flex items-center justify-center font-bold text-[11px] shrink-0 ${
+              idx === 0 
+                ? 'bg-sky-600 text-white' 
+                : idx === 1 
+                ? 'bg-indigo-600 text-white' 
+                : 'bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300'
+            }`}>
+              {idx + 1}
+            </span>
+
+            <!-- Post Thumbnail Image (Sharp, no round corners) -->
+            {post.data.image && (
+              <div class="w-20 h-14 overflow-hidden bg-slate-100 dark:bg-slate-800 shrink-0">
+                <img
+                  src={post.data.image}
+                  alt={post.data.imageAlt || post.data.title}
+                  width="160"
+                  height="112"
+                  loading="lazy"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
+                />
+              </div>
+            )}
+
+            <!-- Post Title & Meta -->
+            <div class="flex-1 min-w-0">
+              <h4 class="text-[13px] font-bold text-slate-900 dark:text-slate-100 group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors leading-[1.35] line-clamp-2">
+                {post.data.title}
+              </h4>
+              <div class="flex items-center gap-2 text-[11px] text-slate-400 mt-1">
+                <span class="text-sky-600 dark:text-sky-400 font-semibold">{post.data.category}</span>
+                <span>•</span>
+                <span>{formatDate(post.data.pubDate)}</span>
+              </div>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+  </div>
+
+  <!-- Widget 2: Recent 5 Comments Widget -->
+  <div>
+    <div class="border-b-2 border-slate-200 dark:border-slate-800 pb-2 mb-4">
+      <h3 class="font-extrabold text-[13px] uppercase tracking-wider text-slate-900 dark:text-white relative">
+        Recent Comments
+        <span class="absolute -bottom-[10px] left-0 w-12 h-[2px] bg-sky-600"></span>
+      </h3>
+    </div>
+
+    <div class="divide-y divide-slate-100 dark:divide-slate-800/80">
+      {recentComments.map((comment) => (
+        <div class="py-3 first:pt-1 last:pb-1">
+          <div class="flex items-center gap-2 mb-1">
+            <span class="w-5 h-5 bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold text-[10px] flex items-center justify-center">
+              {comment.author.charAt(0)}
+            </span>
+            <span class="font-bold text-[12px] text-slate-800 dark:text-slate-200">{comment.author}</span>
+            <span class="text-[10px] text-slate-400 ml-auto">{comment.date}</span>
+          </div>
+          <p class="text-[12px] text-slate-600 dark:text-slate-400 line-clamp-2 italic leading-relaxed">
+            "{comment.content}"
+          </p>
+          <a
+            href={`/${comment.postSlug}#comments`}
+            class="text-[11px] text-sky-600 dark:text-sky-400 font-semibold hover:underline block mt-1 truncate"
+          >
+            on {comment.postTitle}
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Widget 3: Categories List (Sharp borders, no rounded pills) -->
+  <div>
+    <div class="border-b-2 border-slate-200 dark:border-slate-800 pb-2 mb-4">
+      <h3 class="font-extrabold text-[13px] uppercase tracking-wider text-slate-900 dark:text-white relative">
+        Categories
+        <span class="absolute -bottom-[10px] left-0 w-12 h-[2px] bg-sky-600"></span>
+      </h3>
+    </div>
+    
+    <ul class="space-y-1 text-[13px]">
+      {categories.map((cat) => (
+        <li>
+          <a
+            href={`/category/${cat.slug}`}
+            class="flex items-center justify-between py-2 px-2 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 transition-colors font-medium border-b border-slate-100 dark:border-slate-800/60"
+          >
+            <span>{cat.name}</span>
+            <span class="text-[11px] font-mono px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">
+              {cat.count}
+            </span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  <!-- Widget 4: Mid/Bottom Ad Slot (300x250) -->
+  <AdSlot format="rectangle" slotId="sidebar-mid-ad" class="my-0" />
+</aside>

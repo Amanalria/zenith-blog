@@ -1,0 +1,31 @@
+---
+interface Props {
+  slotId?: string;
+  format?: 'banner' | 'rectangle' | 'in-feed';
+  class?: string;
+  active?: boolean;
+}
+
+const { 
+  slotId = 'default-slot', 
+  format = 'banner', 
+  class: customClass = '',
+  active = false // Only displays when ads are actually activated with real ad client code!
+} = Astro.props;
+---
+
+{active && (
+  <div class={`ad-slot-container my-6 w-full flex flex-col items-center justify-center overflow-hidden ${customClass}`} data-slot={slotId}>
+    <!-- Google AdSense script unit will execute here upon live activation -->
+    <ins
+      class="adsbygoogle"
+      style="display:block; text-align:center;"
+      data-ad-layout={format === 'in-feed' ? 'in-article' : undefined}
+      data-ad-format="auto"
+      data-full-width-responsive="true"
+    ></ins>
+    <script is:inline>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+)}

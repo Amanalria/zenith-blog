@@ -1,0 +1,232 @@
+---
+import IconSun from './icons/IconSun.astro';
+import IconMoon from './icons/IconMoon.astro';
+import IconRss from './icons/IconRss.astro';
+import IconSearch from './icons/IconSearch.astro';
+import { siteConfig } from '../config/site';
+---
+
+<header class="sticky top-0 z-40 w-full backdrop-blur-md bg-white/95 dark:bg-slate-900/95 border-b border-slate-200 dark:border-slate-800 transition-colors">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+    
+    <!-- Left: Brand Logo (Image or Text fallback) -->
+    <a href="/" class="flex items-center group shrink-0">
+      {siteConfig.logoImage ? (
+        <img src={siteConfig.logoImage} alt={siteConfig.name} class="h-8 w-auto object-contain" />
+      ) : (
+        <span class="font-extrabold text-2xl tracking-tight text-slate-900 dark:text-white leading-none">
+          {siteConfig.name}<span class="text-sky-600">.</span>
+        </span>
+      )}
+    </a>
+
+    <!-- Right: Navigation (Right-Aligned) + Borderless Action Icons -->
+    <div class="flex items-center gap-6">
+      
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-700 dark:text-slate-200">
+        <a href="/" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">
+          Home
+        </a>
+
+        <!-- Categories Dropdown (Collapsible & space-saving) -->
+        <div class="relative group">
+          <button 
+            type="button" 
+            class="flex items-center gap-1 hover:text-sky-600 dark:hover:text-sky-400 transition-colors py-2 focus:outline-none"
+            aria-expanded="false"
+          >
+            <span>Categories</span>
+            <svg class="w-3.5 h-3.5 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          
+          <!-- Dropdown Menu Panel -->
+          <div class="absolute right-0 top-full pt-1 opacity-0 translate-y-1 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-150 z-50">
+            <div class="w-48 py-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-xl">
+              {siteConfig.categories.map((cat) => (
+                <a
+                  href={`/category/${cat.slug}`}
+                  class="block px-4 py-2 text-xs font-medium text-slate-700 dark:text-slate-300 hover:bg-sky-50 hover:text-sky-600 dark:hover:bg-slate-800 dark:hover:text-sky-400 transition-colors"
+                >
+                  {cat.name}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <a href="/about" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">
+          About
+        </a>
+        <a href="/contact" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">
+          Contact
+        </a>
+      </nav>
+
+      <!-- Action Icons (Completely borderless, no boxy lines) -->
+      <div class="flex items-center gap-1 sm:gap-1.5 pl-3 border-l border-slate-200 dark:border-slate-800">
+        <!-- Search Button (Borderless icon) -->
+        <button
+          type="button"
+          data-search-trigger
+          aria-label="Search articles"
+          class="p-2 rounded-md text-slate-600 dark:text-slate-400 hover:text-sky-600 dark:hover:text-sky-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center gap-1.5"
+          title="Search articles (Ctrl+K)"
+        >
+          <IconSearch class="w-4 h-4" />
+          <span class="hidden lg:inline text-xs font-medium text-slate-500">Search</span>
+        </button>
+
+        <!-- RSS Feed (Borderless icon) -->
+        <a 
+          href="/rss.xml" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          aria-label="RSS Feed"
+          class="p-2 rounded-md text-slate-600 dark:text-slate-400 hover:text-orange-500 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+          title="RSS Feed"
+        >
+          <IconRss class="w-4 h-4" />
+        </a>
+
+        <!-- Dark/Light Theme Toggle (Borderless icon, working JS attached) -->
+        <button 
+          id="theme-toggle-btn" 
+          type="button" 
+          aria-label="Toggle dark mode"
+          class="p-2 rounded-md text-slate-600 dark:text-slate-400 hover:text-sky-600 dark:hover:text-sky-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer"
+          title="Toggle Dark Mode"
+        >
+          <span class="dark:hidden flex items-center"><IconMoon class="w-4 h-4" /></span>
+          <span class="hidden dark:flex items-center"><IconSun class="w-4 h-4" /></span>
+        </button>
+
+        <!-- Mobile Hamburger Button (Borderless icon) -->
+        <button 
+          id="mobile-drawer-btn" 
+          type="button" 
+          aria-label="Open Mobile Menu"
+          class="md:hidden p-2 rounded-md text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Slide-out Drawer -->
+<div id="mobile-drawer-container" class="fixed inset-0 z-50 pointer-events-none transition-all duration-300 md:hidden">
+  <div 
+    id="mobile-drawer-backdrop" 
+    class="absolute inset-0 bg-slate-900/50 backdrop-blur-sm opacity-0 transition-opacity duration-300 pointer-events-none"
+  ></div>
+
+  <aside 
+    id="mobile-drawer-panel" 
+    class="absolute top-0 right-0 h-full w-full max-w-xs bg-white dark:bg-slate-900 border-l border-slate-200 dark:border-slate-800 shadow-2xl translate-x-full transition-transform duration-300 ease-out flex flex-col pointer-events-auto p-6 overflow-y-auto"
+  >
+    <div class="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-slate-800 mb-6">
+      <span class="font-extrabold text-xl tracking-tight text-slate-900 dark:text-white">
+        {siteConfig.name}<span class="text-sky-600">.</span>
+      </span>
+      <button 
+        id="mobile-drawer-close" 
+        type="button" 
+        aria-label="Close menu"
+        class="p-2 rounded-md text-slate-400 hover:text-slate-700 dark:hover:text-white"
+      >
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Categories -->
+    <div class="mb-6">
+      <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Categories</h3>
+      <div class="flex flex-col space-y-1">
+        {siteConfig.categories.map((cat) => (
+          <a
+            href={`/category/${cat.slug}`}
+            class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-sky-50 dark:hover:bg-slate-800"
+          >
+            {cat.name}
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Links -->
+    <div class="mb-6">
+      <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Menu</h3>
+      <div class="flex flex-col space-y-1 text-sm font-medium text-slate-700 dark:text-slate-200">
+        <a href="/" class="px-3 py-1.5 hover:text-sky-600">Home</a>
+        <a href="/about" class="px-3 py-1.5 hover:text-sky-600">About</a>
+        <a href="/contact" class="px-3 py-1.5 hover:text-sky-600">Contact</a>
+        <a href="/privacy-policy" class="px-3 py-1.5 hover:text-sky-600">Privacy Policy</a>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<script is:inline>
+  // 1. Working Dark Mode Toggle Functionality
+  function setupThemeToggle() {
+    const themeBtn = document.getElementById('theme-toggle-btn');
+    if (!themeBtn) return;
+
+    themeBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const isCurrentlyDark = document.documentElement.classList.contains('dark');
+      if (isCurrentlyDark) {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+  }
+
+  // 2. Mobile Drawer Handlers
+  function setupMobileDrawer() {
+    const openBtn = document.getElementById('mobile-drawer-btn');
+    const closeBtn = document.getElementById('mobile-drawer-close');
+    const container = document.getElementById('mobile-drawer-container');
+    const backdrop = document.getElementById('mobile-drawer-backdrop');
+    const panel = document.getElementById('mobile-drawer-panel');
+
+    function openMobile() {
+      container?.classList.remove('pointer-events-none');
+      backdrop?.classList.remove('opacity-0', 'pointer-events-none');
+      backdrop?.classList.add('opacity-100', 'pointer-events-auto');
+      panel?.classList.remove('translate-x-full');
+      panel?.classList.add('translate-x-0');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMobile() {
+      backdrop?.classList.remove('opacity-100', 'pointer-events-auto');
+      backdrop?.classList.add('opacity-0', 'pointer-events-none');
+      panel?.classList.remove('translate-x-0');
+      panel?.classList.add('translate-x-full');
+      document.body.style.overflow = '';
+      setTimeout(() => {
+        container?.classList.add('pointer-events-none');
+      }, 300);
+    }
+
+    openBtn?.addEventListener('click', openMobile);
+    closeBtn?.addEventListener('click', closeMobile);
+    backdrop?.addEventListener('click', closeMobile);
+  }
+
+  // Initialize all listeners
+  setupThemeToggle();
+  setupMobileDrawer();
+</script>
