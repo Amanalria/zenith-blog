@@ -25,44 +25,41 @@ import { siteConfig } from '../config/site';
       
       <!-- Desktop Navigation Links -->
       <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-700 dark:text-slate-200">
-        <a href="/" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">
-          Home
-        </a>
+        {siteConfig.nav.map((item) => (
+          <a href={item.href} class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">
+            {item.name}
+          </a>
+        ))}
 
-        <!-- Categories Dropdown (Collapsible & space-saving) -->
-        <div class="relative group">
-          <button 
-            type="button" 
-            class="flex items-center gap-1 hover:text-sky-600 dark:hover:text-sky-400 transition-colors py-2 focus:outline-none"
-            aria-expanded="false"
-          >
-            <span>Categories</span>
-            <svg class="w-3.5 h-3.5 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          
-          <!-- Dropdown Menu Panel -->
-          <div class="absolute right-0 top-full pt-1 opacity-0 translate-y-1 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-150 z-50">
-            <div class="w-48 py-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-xl">
-              {siteConfig.categories.map((cat) => (
-                <a
-                  href={`/category/${cat.slug}`}
-                  class="block px-4 py-2 text-xs font-medium text-slate-700 dark:text-slate-300 hover:bg-sky-50 hover:text-sky-600 dark:hover:bg-slate-800 dark:hover:text-sky-400 transition-colors"
-                >
-                  {cat.name}
-                </a>
-              ))}
+        <!-- Categories Dropdown (Collapsible & space-saving) - Only shows when categories exist -->
+        {siteConfig.categories && siteConfig.categories.length > 0 && (
+          <div class="relative group">
+            <button 
+              type="button" 
+              class="flex items-center gap-1 hover:text-sky-600 dark:hover:text-sky-400 transition-colors py-2 focus:outline-none"
+              aria-expanded="false"
+            >
+              <span>Categories</span>
+              <svg class="w-3.5 h-3.5 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            
+            <!-- Dropdown Menu Panel -->
+            <div class="absolute right-0 top-full pt-1 opacity-0 translate-y-1 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-150 z-50">
+              <div class="w-48 py-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-xl">
+                {siteConfig.categories.map((cat) => (
+                  <a
+                    href={`/category/${cat.slug}`}
+                    class="block px-4 py-2 text-xs font-medium text-slate-700 dark:text-slate-300 hover:bg-sky-50 hover:text-sky-600 dark:hover:bg-slate-800 dark:hover:text-sky-400 transition-colors"
+                  >
+                    {cat.name}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-
-        <a href="/about" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">
-          About
-        </a>
-        <a href="/contact" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">
-          Contact
-        </a>
+        )}
       </nav>
 
       <!-- Action Icons (Completely borderless, no boxy lines) -->
@@ -146,29 +143,33 @@ import { siteConfig } from '../config/site';
       </button>
     </div>
 
-    <!-- Mobile Categories -->
-    <div class="mb-6">
-      <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Categories</h3>
-      <div class="flex flex-col space-y-1">
-        {siteConfig.categories.map((cat) => (
-          <a
-            href={`/category/${cat.slug}`}
-            class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-sky-50 dark:hover:bg-slate-800"
-          >
-            {cat.name}
-          </a>
-        ))}
+    <!-- Mobile Categories - Only shows when categories exist -->
+    {siteConfig.categories && siteConfig.categories.length > 0 && (
+      <div class="mb-6">
+        <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Categories</h3>
+        <div class="flex flex-col space-y-1">
+          {siteConfig.categories.map((cat) => (
+            <a
+              href={`/category/${cat.slug}`}
+              class="px-3 py-2 text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-sky-50 dark:hover:bg-slate-800"
+            >
+              {cat.name}
+            </a>
+          ))}
+        </div>
       </div>
-    </div>
+    )}
 
     <!-- Mobile Navigation Links -->
     <div class="mb-6">
       <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Menu</h3>
       <div class="flex flex-col space-y-1 text-sm font-medium text-slate-700 dark:text-slate-200">
-        <a href="/" class="px-3 py-1.5 hover:text-sky-600">Home</a>
-        <a href="/about" class="px-3 py-1.5 hover:text-sky-600">About</a>
-        <a href="/contact" class="px-3 py-1.5 hover:text-sky-600">Contact</a>
-        <a href="/privacy-policy" class="px-3 py-1.5 hover:text-sky-600">Privacy Policy</a>
+        {siteConfig.nav.map((item) => (
+          <a href={item.href} class="px-3 py-1.5 hover:text-sky-600">{item.name}</a>
+        ))}
+        {siteConfig.legalLinks.map((link) => (
+          <a href={link.href} class="px-3 py-1.5 hover:text-sky-600">{link.name}</a>
+        ))}
       </div>
     </div>
   </aside>

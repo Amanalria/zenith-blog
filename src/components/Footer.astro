@@ -35,13 +35,17 @@ const currentYear = new Date().getFullYear();
           Topics
         </h3>
         <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-400">
-          {siteConfig.categories.map((cat) => (
-            <li>
-              <a href={`/category/${cat.slug}`} class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">
-                {cat.name}
-              </a>
-            </li>
-          ))}
+          {siteConfig.categories && siteConfig.categories.length > 0 ? (
+            siteConfig.categories.map((cat) => (
+              <li>
+                <a href={`/category/${cat.slug}`} class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">
+                  {cat.name}
+                </a>
+              </li>
+            ))
+          ) : (
+            <li class="italic text-slate-400">No categories yet</li>
+          )}
           <li><a href="/rss.xml" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">RSS Feed</a></li>
         </ul>
       </div>
@@ -69,11 +73,12 @@ const currentYear = new Date().getFullYear();
         © {currentYear} {siteConfig.name}. All rights reserved.
       </div>
       <div class="flex items-center gap-4 text-xs">
-        <a href="/privacy-policy" class="hover:underline">Privacy</a>
-        <span>•</span>
-        <a href="/terms" class="hover:underline">Terms</a>
-        <span>•</span>
-        <a href="/contact" class="hover:underline">Contact</a>
+        {siteConfig.legalLinks.map((link, idx) => (
+          <>
+            {idx > 0 && <span>•</span>}
+            <a href={link.href} class="hover:underline">{link.name}</a>
+          </>
+        ))}
       </div>
     </div>
   </div>
