@@ -3,15 +3,15 @@
  * Change this file to adapt the entire script to any domain or brand without touching template code!
  */
 export const siteConfig = {
-  name: 'ZENITH',
+  name: 'TG MOVIES',
   // Optional custom logo image URL (e.g. '/images/logo.png'). If empty, site name text is used!
   logoImage: '', 
-  siteTitle: 'ZENITH - Modern Web & Systems Journal',
-  description: 'In-depth tutorials, technical guides, performance architecture, and modern digital insights.',
-  url: 'https://zenith-blog.pages.dev', // Production domain
-  author: 'Editorial Team',
-  authorRole: 'Systems & Web Research',
-  email: 'editorial@example.com',
+  siteTitle: 'TG Movies - Latest Movie Reviews, OTT Releases & Cinema News',
+  description: 'Your ultimate destination for authentic movie reviews, box office collection reports, upcoming OTT releases, and cinema news.',
+  url: 'https://tgmovies.in', // Production domain
+  author: 'TG Movies Editorial',
+  authorRole: 'Entertainment & Cinema Desk',
+  email: 'contact@tgmovies.in',
   language: 'en',
   postsPerPage: 10,
   
@@ -20,8 +20,15 @@ export const siteConfig = {
     { name: 'Home', href: '/' },
   ],
 
-  // Primary categories - Add your custom categories here!
-  categories: [] as Array<{ name: string; slug: string }>,
+  // Primary categories for movie portal
+  categories: [
+    { name: 'Bollywood', slug: 'bollywood' },
+    { name: 'Hollywood', slug: 'hollywood' },
+    { name: 'South Cinema', slug: 'south-cinema' },
+    { name: 'OTT Releases', slug: 'ott-releases' },
+    { name: 'Web Series', slug: 'web-series' },
+    { name: 'Movie Reviews', slug: 'movie-reviews' },
+  ],
 
   // Footer legal links (AdSense & compliance)
   legalLinks: [
