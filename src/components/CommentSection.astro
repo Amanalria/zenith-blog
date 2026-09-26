@@ -21,22 +21,28 @@ const postComments = commentsData.filter(c => c.postSlug === postSlug);
 
   <!-- Comments List -->
   <div id="comments-list" class="space-y-4 mb-8">
-    {postComments.map((c) => (
-      <div class="p-4 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
-        <div class="flex items-center justify-between gap-2 mb-1.5">
-          <div class="flex items-center gap-2">
-            <span class="w-7 h-7 bg-sky-600 text-white font-bold text-xs flex items-center justify-center">
-              {c.author.charAt(0)}
-            </span>
-            <span class="font-bold text-xs text-slate-900 dark:text-white">{c.author}</span>
+    {postComments.length === 0 ? (
+      <p id="no-comments-msg" class="text-xs text-slate-500 dark:text-slate-400 italic py-3">
+        No comments yet. Be the first to start the discussion!
+      </p>
+    ) : (
+      postComments.map((c) => (
+        <div class="p-4 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+          <div class="flex items-center justify-between gap-2 mb-1.5">
+            <div class="flex items-center gap-2">
+              <span class="w-7 h-7 bg-sky-600 text-white font-bold text-xs flex items-center justify-center">
+                {c.author.charAt(0)}
+              </span>
+              <span class="font-bold text-xs text-slate-900 dark:text-white">{c.author}</span>
+            </div>
+            <span class="text-[11px] text-slate-400 font-mono">{c.date}</span>
           </div>
-          <span class="text-[11px] text-slate-400 font-mono">{c.date}</span>
+          <p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed pl-9">
+            {c.content}
+          </p>
         </div>
-        <p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed pl-9">
-          {c.content}
-        </p>
-      </div>
-    ))}
+      ))
+    )}
   </div>
 
   <!-- Sharp Comment Submission Form -->
