@@ -1,0 +1,30 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "TG Movies",
+    "identifier": "did:web:tgmovies.in"
+  },
+  "entries": [
+    {
+      "identifier": "urn:ai:tgmovies.in:resource:llms-context",
+      "displayName": "TG Movies LLMs Context and Film Archive",
+      "type": "text/markdown",
+      "url": "https://tgmovies.in/llms.txt",
+      "description": "Standardized markdown archive providing verified movie reviews, box office numbers, cast and crew details, and entertainment analyses."
+    },
+    {
+      "identifier": "urn:ai:tgmovies.in:feed:rss",
+      "displayName": "TG Movies Syndication Feed",
+      "type": "application/rss+xml",
+      "url": "https://tgmovies.in/rss.xml",
+      "description": "Real-time entertainment article syndication feed formatted for autonomous AI consumption."
+    },
+    {
+      "identifier": "urn:ai:tgmovies.in:sitemap:xml",
+      "displayName": "TG Movies Multimodal XML Sitemap",
+      "type": "application/xml",
+      "url": "https://tgmovies.in/sitemap.xml",
+      "description": "Comprehensive XML sitemap declaring active movie review URLs and multimodal ImageObject visual assets."
+    }
+  ]
+}

@@ -104,9 +104,16 @@ const schemaOrg = article
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-<!-- RSS Syndication & Sitemap Autodiscovery -->
+<!-- Resource Hints & Preconnect for Edge Speed -->
+<link rel="dns-prefetch" href="https://static.cloudflareinsights.com" />
+<link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin />
+
+<!-- RSS Syndication, Sitemaps & AI Agent Manifest Autodiscovery -->
 <link rel="alternate" type="application/rss+xml" title={`${siteConfig.name} RSS Feed`} href="/rss.xml" />
+<link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
+<link rel="ai-catalog" type="application/json" href="/.well-known/ai-catalog.json" />
+<link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs Context" />
 
 <!-- Primary Meta Tags -->
 <title>{fullTitle}</title>
