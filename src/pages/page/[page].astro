@@ -30,8 +30,8 @@ const prevUrl = page.currentPage === 2 ? '/' : page.url.prev;
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start my-4">
       <main class="lg:col-span-8">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10">
-          {page.data.map((post: any) => (
-            <PostCard post={post} />
+          {page.data.map((post: any, index: number) => (
+            <PostCard post={post} priority={index < 2} />
           ))}
         </div>
 

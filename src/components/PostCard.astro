@@ -13,7 +13,7 @@ const { post, priority = false } = Astro.props;
 const slug = getPostSlug(post);
 const { title, description, pubDate, category, readTime, image, imageAlt } = post.data;
 const postUrl = `/${slug}`;
-const categoryUrl = `/category/${category.toLowerCase().replace(/[^a-z0-9]/g, '-')}`;
+const categoryUrl = `/category/${category.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`;
 ---
 
 <article class="group flex flex-col bg-transparent">

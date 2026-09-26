@@ -25,8 +25,8 @@ export const siteConfig = {
     { name: 'Bollywood', slug: 'bollywood' },
     { name: 'Hollywood', slug: 'hollywood' },
     { name: 'South Cinema', slug: 'south-cinema' },
-    { name: 'OTT Releases', slug: 'ott-releases' },
-    { name: 'Web Series', slug: 'web-series' },
+    { name: 'OTT & Web Series', slug: 'ott-web-series' },
+    { name: 'Cinema News', slug: 'cinema-news' },
     { name: 'Movie Reviews', slug: 'movie-reviews' },
   ],
 

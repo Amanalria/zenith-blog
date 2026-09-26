@@ -12,7 +12,7 @@ export async function getStaticPaths() {
   const categories = [...new Set(posts.map((p) => p.data.category))];
 
   return categories.map((cat) => {
-    const slug = cat.toLowerCase().replace(/[^a-z0-9]/g, '-');
+    const slug = cat.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
     const filteredPosts = posts.filter((p) => p.data.category === cat);
     return {
       params: { category: slug },
