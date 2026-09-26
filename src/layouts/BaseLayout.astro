@@ -4,6 +4,7 @@ import Footer from '../components/Footer.astro';
 import SEO from '../components/SEO.astro';
 import SearchModal from '../components/SearchModal.astro';
 import CookieConsent from '../components/CookieConsent.astro';
+import BackToTop from '../components/BackToTop.astro';
 import { siteConfig } from '../config/site';
 import '../styles/global.css';
 
@@ -59,5 +60,8 @@ const props = Astro.props;
 
     <!-- Real Working Cookie & Privacy Consent Banner -->
     <CookieConsent />
+
+    <!-- Sharp Back To Top Button with Smooth Momentum Scroll -->
+    <BackToTop />
   </body>
 </html>

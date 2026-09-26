@@ -1,0 +1,20 @@
+# TG Movies
+
+> TG Movies is an independent cinema journal providing genuine movie reviews, box office collection analysis, upcoming OTT release schedules, and entertainment industry news.
+
+## Key Sections
+- [Home](https://tgmovies.in/): Latest publications, trending movie news, and editorial highlights.
+- [Bollywood](https://tgmovies.in/category/bollywood): In-depth reviews and box office reports from Hindi cinema.
+- [Hollywood](https://tgmovies.in/category/hollywood): Global blockbuster reviews, festival premieres, and franchise updates.
+- [South Cinema](https://tgmovies.in/category/south-cinema): Coverage of Telugu, Tamil, Malayalam, and Kannada film industries.
+- [OTT Releases](https://tgmovies.in/category/ott-releases): Weekly streaming release calendars across Netflix, Prime Video, Disney+ Hotstar, and JioCinema.
+- [Web Series](https://tgmovies.in/category/web-series): Reviews and season breakdowns of trending streaming shows.
+- [Movie Reviews](https://tgmovies.in/category/movie-reviews): Editorial reviews and star ratings.
+
+## Feeds & Sitemaps
+- [RSS Feed](https://tgmovies.in/rss.xml): Real-time XML syndication feed of newly published articles.
+- [Sitemap](https://tgmovies.in/sitemap-index.xml): Full XML sitemap index.
+
+## Editorial Policy
+- Factual release dates, verified star cast details, and objective critical analysis.
+- Zero fake metrics and zero sponsored bias without disclosure.

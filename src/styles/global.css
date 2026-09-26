@@ -25,7 +25,14 @@
 
   html {
     scroll-behavior: smooth;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   }
 
   body {
@@ -35,24 +42,67 @@
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
+    line-height: 1.6;
+    -webkit-overflow-scrolling: touch;
   }
 
+  /* Precision sharp selection */
   ::selection {
     background-color: #0284c7;
     color: #ffffff;
   }
+
+  /* Sleek modern scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+  }
+  .dark ::-webkit-scrollbar-thumb {
+    background: #1e293b;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+  }
+  .dark ::-webkit-scrollbar-thumb:hover {
+    background: #334155;
+  }
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 transparent;
+  }
+  .dark * {
+    scrollbar-color: #1e293b transparent;
+  }
 }
 
-/* Sharp modern utilities */
+/* Sharp modern utilities with GPU acceleration */
 .sharp-card {
   background-color: var(--bg-card);
   border: 1px solid var(--border-color);
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateZ(0);
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .sharp-card:hover {
   border-color: var(--accent);
-  transform: translateY(-2px);
+}
+
+/* Sticky header GPU stabilization layer */
+.sticky-header-gpu {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+/* Zero CLS image container */
+img {
+  content-visibility: auto;
 }
 
 /* Ad container with zero CLS layout reserve */
@@ -63,9 +113,9 @@
   justify-content: center;
   background-color: rgba(148, 163, 184, 0.05);
   border: 1px dashed var(--border-color);
-  border-radius: 6px;
   overflow: hidden;
   position: relative;
+  contain: layout paint;
 }
 
 .ad-label {
