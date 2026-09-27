@@ -3,7 +3,8 @@ title: "Manjummel Boys Survival Thriller Film Analysis: Chidambaram's Malayalam 
 description: "Comprehensive Manjummel Boys survival thriller film analysis detailing Chidambaram's direction, the true Guna Caves rescue, and ₹240 crore box office record."
 pubDate: 2024-09-24
 category: "Movie Reviews"
-author: "TG Movies Review Desk"
+author: "Aman Alria"
+authorRole: "Chief Editor & Film Journalist"
 image: "/images/manjummel-boys-survival-thriller-film-analysis.webp"
 imageAlt: "Manjummel Boys survival thriller film analysis banner with Guna Caves rescue operation"
 ---

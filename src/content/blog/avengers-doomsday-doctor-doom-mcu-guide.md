@@ -2,6 +2,8 @@
 title: "Avengers Doomsday Movie Release Date and Doctor Doom Plot Analysis: RDJ Returns"
 description: "Comprehensive Avengers Doomsday movie release date and Doctor Doom plot analysis detailing Robert Downey Jr.'s villain role, Russo Brothers, and MCU timeline."
 pubDate: 2024-09-27
+author: "Aman Alria"
+authorRole: "Chief Editor & Film Journalist"
 category: "Hollywood"
 tags: ["Avengers Doomsday", "Doctor Doom", "Robert Downey Jr", "Marvel", "MCU", "Russo Brothers", "Avengers 5"]
 image: "/images/avengers-doomsday-doctor-doom-mcu-guide.webp"

@@ -2,6 +2,8 @@
 title: "Oppenheimer Movie Review and Historical Accuracy Analysis: Nolan's Oscar Masterpiece"
 description: "Comprehensive Oppenheimer movie review and historical accuracy analysis detailing Christopher Nolan's 7-time Oscar winner, Trinity Test, and historical facts."
 pubDate: 2024-09-23
+author: "Aman Alria"
+authorRole: "Chief Editor & Film Journalist"
 category: "Hollywood"
 tags: ["Oppenheimer", "Christopher Nolan", "Cillian Murphy", "Oscar Winner", "Movie Review", "Historical Drama"]
 image: "/images/oppenheimer-christopher-nolan-film-analysis.webp"

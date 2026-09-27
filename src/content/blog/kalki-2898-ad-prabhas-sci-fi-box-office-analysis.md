@@ -3,7 +3,8 @@ title: "Kalki 2898 AD Prabhas Sci-Fi Box Office Analysis and Mahabharata Lore Br
 description: "In-depth Kalki 2898 AD Prabhas sci-fi box office analysis detailing Nag Ashwin's direction, Amitabh Bachchan's Ashwatthama, and dystopian world-building."
 pubDate: 2024-09-25
 category: "South Cinema"
-author: "TG Movies South Cinema Desk"
+author: "Aman Alria"
+authorRole: "Chief Editor & Film Journalist"
 image: "/images/kalki-2898-ad-prabhas-sci-fi-box-office-analysis.webp"
 imageAlt: "Kalki 2898 AD Prabhas sci-fi box office analysis and Mahabharata lore banner"
 ---

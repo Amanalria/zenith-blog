@@ -2,6 +2,8 @@
 title: "Gladiator 2 Movie Review and Historical Sequel Breakdown: Ridley Scott Returns to Rome"
 description: "Comprehensive Gladiator 2 movie review and historical sequel breakdown detailing Paul Mescal, Denzel Washington, Colosseum naval battles, and box office impact."
 pubDate: 2024-09-22
+author: "Aman Alria"
+authorRole: "Chief Editor & Film Journalist"
 category: "Hollywood"
 tags: ["Gladiator 2", "Ridley Scott", "Paul Mescal", "Denzel Washington", "Movie Review", "Hollywood", "Historical Epic"]
 image: "/images/gladiator-2-ridley-scott-sequel-review.webp"

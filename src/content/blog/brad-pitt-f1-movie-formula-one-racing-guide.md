@@ -2,6 +2,8 @@
 title: "Brad Pitt F1 Movie Release Date and Racing Film Breakdown: Kosinski's High-Octane Epic"
 description: "Comprehensive Brad Pitt F1 movie release date and racing film breakdown detailing Joseph Kosinski's real Grand Prix filming, Lewis Hamilton's role, and budget."
 pubDate: 2024-09-25
+author: "Aman Alria"
+authorRole: "Chief Editor & Film Journalist"
 category: "Hollywood"
 tags: ["Brad Pitt", "F1 Movie", "Formula 1", "Joseph Kosinski", "Lewis Hamilton", "Hollywood", "Movie Preview"]
 image: "/images/brad-pitt-f1-movie-formula-one-racing-guide.webp"

@@ -3,7 +3,8 @@ title: "Singham Again Cop Universe Box Office Review and Ramayana Allegory Break
 description: "Comprehensive Singham Again cop universe box office review detailing Ajay Devgn, Akshay Kumar, Ranveer Singh, Deepika Padukone, and Ramayana parallels."
 pubDate: 2024-09-25
 category: "Bollywood"
-author: "TG Movies Bollywood Desk"
+author: "Aman Alria"
+authorRole: "Chief Editor & Film Journalist"
 image: "/images/singham-again-cop-universe-box-office-review.webp"
 imageAlt: "Singham Again cop universe box office review banner with Ajay Devgn and Rohit Shetty cast"
 ---

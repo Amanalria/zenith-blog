@@ -2,6 +2,8 @@
 title: "Wolfs Movie Review and Brad Pitt George Clooney Reunion Analysis: The Ultimate Fixer Comedy"
 description: "In-depth Wolfs movie review and Brad Pitt George Clooney reunion analysis detailing Jon Watts' neo-noir comedy, Venice premiere, and Apple TV+ viewership records."
 pubDate: 2024-09-27
+author: "Aman Alria"
+authorRole: "Chief Editor & Film Journalist"
 category: "Hollywood"
 tags: ["Wolfs", "Brad Pitt", "George Clooney", "Jon Watts", "Apple TV+", "Movie Review", "Hollywood"]
 image: "/images/wolfs-movie-review-brad-pitt-george-clooney.webp"

@@ -3,7 +3,8 @@ title: "Pushpa 2 The Rule Allu Arjun Box Office Guide and Theatrical Phenomenon:
 description: "Comprehensive Pushpa 2 The Rule Allu Arjun box office guide detailing Sukumar's direction, Bhanwar Singh Shekhawat rivalry, and pre-release business records."
 pubDate: 2024-09-26
 category: "South Cinema"
-author: "TG Movies South Cinema Desk"
+author: "Aman Alria"
+authorRole: "Chief Editor & Film Journalist"
 image: "/images/pushpa-2-the-rule-allu-arjun-box-office-guide.webp"
 imageAlt: "Pushpa 2 The Rule Allu Arjun box office guide and theatrical phenomenon banner"
 ---

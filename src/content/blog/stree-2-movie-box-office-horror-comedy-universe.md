@@ -3,7 +3,8 @@ title: "Stree 2 Movie Box Office Collection and Horror Comedy Universe Analysis:
 description: "Comprehensive Stree 2 movie box office collection and horror comedy universe analysis detailing Shraddha Kapoor, Rajkummar Rao, Sarkata lore, and Maddock records."
 pubDate: 2024-09-26
 category: "Bollywood"
-author: "TG Movies Bollywood Desk"
+author: "Aman Alria"
+authorRole: "Chief Editor & Film Journalist"
 image: "/images/stree-2-movie-box-office-horror-comedy-universe.webp"
 imageAlt: "Stree 2 movie box office collection and horror comedy universe banner with Sarkata lore"
 ---

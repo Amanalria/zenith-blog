@@ -3,7 +3,8 @@ title: "Mirzapur Season 3 Review and Crime Thriller Analysis: The Battle for the
 description: "Comprehensive Mirzapur Season 3 review and crime thriller analysis detailing Ali Fazal's Guddu Pandit, Pankaj Tripathi's Kaleen Bhaiya, and Season 4 setup."
 pubDate: 2024-09-25
 category: "OTT & Web Series"
-author: "TG Movies OTT Desk"
+author: "Aman Alria"
+authorRole: "Chief Editor & Film Journalist"
 image: "/images/mirzapur-season-3-review-crime-thriller-analysis.webp"
 imageAlt: "Mirzapur Season 3 review and crime thriller analysis banner with Guddu Pandit and Kaleen Bhaiya"
 ---

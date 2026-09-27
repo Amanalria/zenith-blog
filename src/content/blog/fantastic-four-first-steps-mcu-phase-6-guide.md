@@ -2,6 +2,8 @@
 title: "Fantastic Four First Steps Movie Release Date and MCU Phase 6 Guide: Marvel's Retro Future"
 description: "In-depth Fantastic Four First Steps movie release date and MCU Phase 6 guide detailing Pedro Pascal's cast, Galactus, retro 1960s Earth, and Doomsday ties."
 pubDate: 2024-09-26
+author: "Aman Alria"
+authorRole: "Chief Editor & Film Journalist"
 category: "Hollywood"
 tags: ["Fantastic Four", "Pedro Pascal", "MCU Phase 6", "Marvel", "Matt Shakman", "Galactus", "Movie Preview"]
 image: "/images/fantastic-four-first-steps-mcu-phase-6-guide.webp"

@@ -3,7 +3,8 @@ title: "Avengers Secret Wars MCU Phase 6 Timeline News and Battleworld Analysis:
 description: "Comprehensive Avengers Secret Wars MCU Phase 6 timeline news detailing Russo Brothers, Battleworld lore, Hugh Jackman, and Robert Downey Jr.'s Doctor Doom."
 pubDate: 2024-09-27
 category: "Cinema News"
-author: "TG Movies News Desk"
+author: "Aman Alria"
+authorRole: "Chief Editor & Film Journalist"
 image: "/images/avengers-secret-wars-mcu-phase-6-timeline-news.webp"
 imageAlt: "Avengers Secret Wars MCU Phase 6 timeline news and Battleworld analysis banner"
 ---

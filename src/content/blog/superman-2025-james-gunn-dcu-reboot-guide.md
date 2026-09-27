@@ -2,6 +2,8 @@
 title: "Superman 2025 Movie Release Date and DC Universe Reboot Breakdown: James Gunn's Vision"
 description: "In-depth Superman 2025 movie release date and DC Universe reboot breakdown detailing David Corenswet, Nicholas Hoult's Lex Luthor, and DCU Chapter One."
 pubDate: 2024-09-26
+author: "Aman Alria"
+authorRole: "Chief Editor & Film Journalist"
 category: "Hollywood"
 tags: ["Superman 2025", "James Gunn", "David Corenswet", "DC Universe", "DCU", "Lex Luthor", "Movie Preview"]
 image: "/images/superman-2025-james-gunn-dcu-reboot-guide.webp"

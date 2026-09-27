@@ -2,6 +2,8 @@
 title: "Dune 2 Movie Review and Box Office Analysis: The Definitive Sci-Fi Guide"
 description: "In-depth Dune 2 movie review and box office analysis covering Denis Villeneuve's sci-fi epic, Arrakis lore, Paul Atreides' journey, and streaming details."
 pubDate: 2024-09-24
+author: "Aman Alria"
+authorRole: "Chief Editor & Film Journalist"
 category: "Hollywood"
 tags: ["Dune 2", "Hollywood", "Denis Villeneuve", "Sci-Fi", "Movie Review", "Box Office"]
 image: "/images/dune-part-two-movie-review-analysis.webp"

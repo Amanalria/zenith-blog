@@ -3,7 +3,8 @@ title: "Chandu Champion Kartik Aaryan Biographical Review: Kabir Khan's Inspirin
 description: "Comprehensive Chandu Champion movie review detailing Kartik Aaryan's physical transformation, Kabir Khan's direction, and Murlikant Petkar's true story."
 pubDate: 2024-09-24
 category: "Movie Reviews"
-author: "TG Movies Review Desk"
+author: "Aman Alria"
+authorRole: "Chief Editor & Film Journalist"
 image: "/images/chandu-champion-kartik-aaryan-biographical-review.webp"
 imageAlt: "Chandu Champion Kartik Aaryan biographical review banner with Olympic swimming scene"
 ---

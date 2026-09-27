@@ -1,6 +1,5 @@
 ---
 import IconRss from './icons/IconRss.astro';
-import IconShield from './icons/IconShield.astro';
 import { siteConfig } from '../config/site';
 
 const currentYear = new Date().getFullYear();
@@ -23,10 +22,7 @@ const currentYear = new Date().getFullYear();
         <p class="text-xs text-slate-500 dark:text-slate-400 max-w-md leading-relaxed">
           {siteConfig.description}
         </p>
-        <div class="flex items-center gap-2 text-[11px] text-slate-500 dark:text-slate-400">
-          <IconShield class="w-3.5 h-3.5 text-sky-500" />
-          <span>Independent editorial publication • 100% verified research</span>
-        </div>
+
       </div>
 
       <!-- Col 2: Navigation -->

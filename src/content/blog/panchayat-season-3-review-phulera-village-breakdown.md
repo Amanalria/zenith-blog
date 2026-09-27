@@ -3,7 +3,8 @@ title: "Panchayat Season 3 Review and Phulera Village Story Breakdown: TVF's Rur
 description: "Comprehensive Panchayat Season 3 review and Phulera village story breakdown detailing Jitendra Kumar, Neena Gupta, ending gunfight, and Season 4 future."
 pubDate: 2024-09-25
 category: "OTT & Web Series"
-author: "TG Movies OTT Desk"
+author: "Aman Alria"
+authorRole: "Chief Editor & Film Journalist"
 image: "/images/panchayat-season-3-review-phulera-village-breakdown.webp"
 imageAlt: "Panchayat Season 3 review and Phulera village story breakdown banner with Jitendra Kumar"
 ---

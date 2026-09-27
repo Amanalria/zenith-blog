@@ -2,6 +2,8 @@
 title: "Inside Out 2 Movie Review and Psychological Analysis: Pixar's $1.69B Record Breaker"
 description: "In-depth Inside Out 2 movie review and psychological analysis exploring Anxiety, puberty emotions, the Sense of Self mechanism, and historic box office records."
 pubDate: 2024-09-23
+author: "Aman Alria"
+authorRole: "Chief Editor & Film Journalist"
 category: "Hollywood"
 tags: ["Inside Out 2", "Pixar", "Animation", "Disney", "Movie Review", "Box Office Record", "Mental Health"]
 image: "/images/inside-out-2-pixar-movie-review-guide.webp"

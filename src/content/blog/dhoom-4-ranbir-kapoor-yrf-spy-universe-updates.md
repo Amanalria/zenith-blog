@@ -3,7 +3,8 @@ title: "Dhoom 4 Ranbir Kapoor Casting and YRF Franchise Reboot Updates: The Next
 description: "Comprehensive Dhoom 4 Ranbir Kapoor casting and YRF franchise reboot updates detailing Aditya Chopra's vision, Ayan Mukerji talks, and high-tech heist plans."
 pubDate: 2024-09-27
 category: "Cinema News"
-author: "TG Movies News Desk"
+author: "Aman Alria"
+authorRole: "Chief Editor & Film Journalist"
 image: "/images/dhoom-4-ranbir-kapoor-yrf-spy-universe-updates.webp"
 imageAlt: "Dhoom 4 Ranbir Kapoor casting and YRF franchise reboot updates banner"
 ---

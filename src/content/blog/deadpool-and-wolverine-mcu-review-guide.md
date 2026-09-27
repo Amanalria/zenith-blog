@@ -2,6 +2,8 @@
 title: "Deadpool and Wolverine Movie Review and MCU Timeline Breakdown: The Ultimate Multiverse Guide"
 description: "Comprehensive Deadpool and Wolverine movie review and MCU timeline breakdown detailing Hugh Jackman's return, TVA secrets, Void cameos, and box office records."
 pubDate: 2024-09-24
+author: "Aman Alria"
+authorRole: "Chief Editor & Film Journalist"
 category: "Hollywood"
 tags: ["Deadpool and Wolverine", "Marvel", "MCU", "Ryan Reynolds", "Hugh Jackman", "Movie Review", "Box Office"]
 image: "/images/deadpool-and-wolverine-mcu-review-guide.webp"

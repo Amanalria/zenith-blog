@@ -9,8 +9,8 @@ export const siteConfig = {
   siteTitle: 'TG Movies - Latest Movie Reviews, OTT Releases & Cinema News',
   description: 'Your ultimate destination for authentic movie reviews, box office collection reports, upcoming OTT releases, and cinema news.',
   url: 'https://tgmovies.in', // Production domain
-  author: 'TG Movies Editorial',
-  authorRole: 'Entertainment & Cinema Desk',
+  author: 'Aman Alria',
+  authorRole: 'Chief Editor & Film Journalist',
   email: 'contact@tgmovies.in',
   language: 'en',
   postsPerPage: 10,
