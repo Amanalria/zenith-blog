@@ -92,8 +92,8 @@ ${allUrls
   return new Response(xml.trim(), {
     headers: {
       'Content-Type': 'application/xml; charset=utf-8',
-      'Cache-Control': 'public, max-age=3600, must-revalidate',
-      'X-Robots-Tag': 'noindex',
+      'Cache-Control': 'public, max-age=0, s-maxage=3600, must-revalidate',
+      'Access-Control-Allow-Origin': '*',
     },
   });
 };
