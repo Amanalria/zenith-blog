@@ -18,6 +18,7 @@ export const GET: APIRoute = async ({ site }) => {
     { url: '/about/', changefreq: 'monthly', priority: '0.6', lastmod: nowIso },
     { url: '/contact/', changefreq: 'monthly', priority: '0.6', lastmod: nowIso },
     { url: '/privacy-policy/', changefreq: 'monthly', priority: '0.3', lastmod: nowIso },
+    { url: '/cookie-consent/', changefreq: 'monthly', priority: '0.3', lastmod: nowIso },
     { url: '/terms/', changefreq: 'monthly', priority: '0.3', lastmod: nowIso },
     { url: '/disclaimer/', changefreq: 'monthly', priority: '0.3', lastmod: nowIso },
   ];

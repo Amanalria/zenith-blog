@@ -24,8 +24,8 @@ const categories = Object.keys(categoryCounts).map(cat => ({
   count: categoryCounts[cat]
 }));
 
-// Recent 5 Comments for sidebar
-const recentComments = commentsData.slice(0, 5);
+// Fallback initial comments from local data
+const initialRecentComments = commentsData.slice(0, 5);
 ---
 
 <aside class="space-y-8">
@@ -95,7 +95,7 @@ const recentComments = commentsData.slice(0, 5);
     </div>
   </div>
 
-  <!-- Widget 2: Recent 5 Comments Widget -->
+  <!-- Widget 2: Recent 5 Comments Widget (Live synced from Cloudflare D1 across all posts) -->
   <div>
     <div class="border-b-2 border-slate-200 dark:border-slate-800 pb-2 mb-4">
       <h3 class="font-extrabold text-[13px] uppercase tracking-wider text-slate-900 dark:text-white relative">
@@ -105,16 +105,16 @@ const recentComments = commentsData.slice(0, 5);
     </div>
 
     <div id="sidebar-comments-list" class="divide-y divide-slate-100 dark:divide-slate-800/80">
-      {recentComments.length === 0 ? (
+      {initialRecentComments.length === 0 ? (
         <p id="sidebar-no-comments" class="text-[12px] text-slate-500 dark:text-slate-400 py-3 italic">
-          No comments yet.
+          No comments yet. Be the first to start the discussion!
         </p>
       ) : (
-        recentComments.map((comment) => (
+        initialRecentComments.map((comment) => (
           <div class="py-3 first:pt-1 last:pb-1">
             <div class="flex items-center gap-2 mb-1">
-              <span class="w-5 h-5 bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold text-[10px] flex items-center justify-center">
-                {comment.author.charAt(0)}
+              <span class="w-5 h-5 bg-sky-600 text-white font-bold text-[10px] flex items-center justify-center">
+                {comment.author.charAt(0).toUpperCase()}
               </span>
               <span class="font-bold text-[12px] text-slate-800 dark:text-slate-200">{comment.author}</span>
               <span class="text-[10px] text-slate-400 ml-auto">{comment.date}</span>
@@ -169,3 +169,59 @@ const recentComments = commentsData.slice(0, 5);
   <!-- Widget 4: Mid/Bottom Ad Slot (300x250) -->
   <AdSlot format="rectangle" slotId="sidebar-mid-ad" class="my-0" />
 </aside>
+
+<script is:inline>
+  // Live load latest 5 comments across all posts from Cloudflare D1
+  (async function loadRecentComments() {
+    const container = document.getElementById('sidebar-comments-list');
+    if (!container) return;
+
+    try {
+      const res = await fetch('/api/comments?recent=5');
+      if (!res.ok) return;
+      const data = await res.json();
+      if (!data || !data.success || !Array.isArray(data.comments) || data.comments.length === 0) return;
+
+      container.innerHTML = '';
+      data.comments.forEach((c) => {
+        const item = document.createElement('div');
+        item.className = 'py-3 first:pt-1 last:pb-1';
+
+        const header = document.createElement('div');
+        header.className = 'flex items-center gap-2 mb-1';
+
+        const badge = document.createElement('span');
+        badge.className = 'w-5 h-5 bg-sky-600 text-white font-bold text-[10px] flex items-center justify-center';
+        badge.textContent = (c.author_name ? c.author_name.charAt(0) : 'U').toUpperCase();
+
+        const author = document.createElement('span');
+        author.className = 'font-bold text-[12px] text-slate-800 dark:text-slate-200';
+        author.textContent = c.author_name || 'Reader';
+
+        const date = document.createElement('span');
+        date.className = 'text-[10px] text-slate-400 ml-auto';
+        date.textContent = c.created_at ? c.created_at.split(' ')[0] : 'Today';
+
+        header.appendChild(badge);
+        header.appendChild(author);
+        header.appendChild(date);
+
+        const content = document.createElement('p');
+        content.className = 'text-[12px] text-slate-600 dark:text-slate-400 line-clamp-2 italic leading-relaxed';
+        content.textContent = '"' + c.content + '"';
+
+        const link = document.createElement('a');
+        link.href = '/' + encodeURIComponent(c.post_slug) + '#comments';
+        link.className = 'text-[11px] text-sky-600 dark:text-sky-400 font-semibold hover:underline block mt-1 truncate';
+        link.textContent = 'on ' + (c.post_title || 'Movie Review');
+
+        item.appendChild(header);
+        item.appendChild(content);
+        item.appendChild(link);
+        container.appendChild(item);
+      });
+    } catch (err) {
+      console.warn('Could not load sidebar comments:', err);
+    }
+  })();
+</script>

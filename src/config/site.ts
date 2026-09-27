@@ -37,6 +37,7 @@ export const siteConfig = {
     { name: 'About Us', href: '/about' },
     { name: 'Contact Us', href: '/contact' },
     { name: 'Privacy Policy', href: '/privacy-policy' },
+    { name: 'Cookie Policy', href: '/cookie-consent' },
     { name: 'Terms of Service', href: '/terms' },
     { name: 'Disclaimer', href: '/disclaimer' },
   ],

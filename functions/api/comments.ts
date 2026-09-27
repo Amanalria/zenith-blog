@@ -1,5 +1,8 @@
 // Cloudflare Pages Function for Comments API
-// Handles GET (fetch comments by post_slug) and POST (submit new comment to D1)
+// Handles:
+// 1. GET /api/comments?slug=<slug> -> Returns comments for specific post
+// 2. GET /api/comments?recent=5 -> Returns recent 5 comments across ALL posts for homepage/sidebar
+// 3. POST /api/comments -> Inserts new comment into D1
 
 interface Env {
   tgmovies_db: D1Database;
@@ -17,15 +20,35 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
 
   const url = new URL(context.request.url);
   const slug = url.searchParams.get("slug");
-
-  if (!slug) {
-    return new Response(JSON.stringify({ error: "Missing slug parameter", comments: [] }), {
-      status: 400,
-      headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" }
-    });
-  }
+  const recentParam = url.searchParams.get("recent");
 
   try {
+    // Mode A: Fetch latest comments across all posts for Homepage / Sidebar
+    if (recentParam) {
+      const limit = Math.min(Math.max(parseInt(recentParam, 10) || 5, 1), 20);
+      const { results } = await db
+        .prepare("SELECT id, post_slug, post_title, author_name, content, created_at FROM comments ORDER BY id DESC LIMIT ?")
+        .bind(limit)
+        .all();
+
+      return new Response(JSON.stringify({ success: true, comments: results || [] }), {
+        status: 200,
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+          "Cache-Control": "no-cache"
+        }
+      });
+    }
+
+    // Mode B: Fetch comments for a specific post slug ONLY
+    if (!slug) {
+      return new Response(JSON.stringify({ error: "Missing slug parameter", comments: [] }), {
+        status: 400,
+        headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" }
+      });
+    }
+
     const { results } = await db
       .prepare("SELECT id, author_name, content, created_at FROM comments WHERE post_slug = ? ORDER BY id ASC")
       .bind(slug)

@@ -1,0 +1,207 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { siteConfig } from '../config/site';
+---
+
+<BaseLayout
+  title={`Cookie Consent & Preferences - ${siteConfig.name} | Cookie Policy`}
+  description="Manage your cookie preferences, understand tracking technologies, and exercise consent choices on TG Movies in compliance with GDPR and ePrivacy guidelines."
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-12 md:py-16">
+    <!-- Header -->
+    <div class="border-b border-slate-200 dark:border-slate-800 pb-6 mb-8">
+      <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 mb-2">
+        <span>Privacy & Transparency Standards</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+        Cookie Policy & Consent Center
+      </h1>
+      <p class="text-sm text-slate-500 dark:text-slate-400 mt-2">
+        Last Updated: September 27, 2026 • Full Transparency on Web Storage & Third-Party Cookies
+      </p>
+    </div>
+
+    <!-- Interactive Preferences Control Panel -->
+    <div class="my-8 p-6 border border-slate-200 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-900/40 rounded-lg not-prose">
+      <h2 class="text-base font-bold text-slate-900 dark:text-white mb-2">
+        Your Current Cookie Preferences
+      </h2>
+      <p class="text-xs text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
+        You can inspect or adjust your saved consent status directly on this device at any time:
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-4 border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900">
+        <div>
+          <span class="text-xs font-bold text-slate-900 dark:text-white block">Status:</span>
+          <span id="current-consent-status" class="text-xs font-mono font-semibold text-sky-600 dark:text-sky-400">
+            Checking status...
+          </span>
+        </div>
+        <div class="flex items-center gap-2">
+          <button
+            id="reset-consent-btn"
+            type="button"
+            class="px-3.5 py-1.5 text-xs font-medium border border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 transition-colors"
+          >
+            Reset Choice
+          </button>
+          <button
+            id="accept-all-page-btn"
+            type="button"
+            class="px-4 py-1.5 text-xs font-bold bg-sky-600 hover:bg-sky-500 text-white transition-colors"
+          >
+            Accept All Cookies
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Explanatory Content (650+ Words) -->
+    <div class="prose prose-slate dark:prose-invert max-w-none text-slate-700 dark:text-slate-300 space-y-6">
+      <p class="text-base sm:text-lg leading-relaxed text-slate-800 dark:text-slate-200 font-medium">
+        At <strong>TG Movies</strong> (<a href="https://tgmovies.in" class="text-sky-600 hover:underline">tgmovies.in</a>), we are dedicated to complete transparency regarding the automated technologies, cookies, and local data storage mechanisms deployed across our site. This policy outlines how cookies operate, why they are utilized, and how you can exercise granular control over your digital footprint.
+      </p>
+
+      <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white pt-4 border-t border-slate-200 dark:border-slate-800">
+        1. What Are Cookies & Web Storage Technologies?
+      </h2>
+      <p class="leading-relaxed">
+        Cookies are compact alphanumeric text files placed onto your computer, tablet, or smartphone by web servers when you browse online. They allow websites to remember your device, preserve session security, maintain user preferences across navigation clicks, and deliver personalized editorial content. Alongside standard cookies, modern websites utilize HTML5 <code>localStorage</code> and <code>sessionStorage</code> to store client-side preferences without transmitting data across every network packet.
+      </p>
+
+      <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white pt-4 border-t border-slate-200 dark:border-slate-800">
+        2. Categorization of Cookies Used on TG Movies
+      </h2>
+      <p class="leading-relaxed">
+        We classify the cookies and tracking tokens deployed on our platform into three explicit operational tiers:
+      </p>
+
+      <h3 class="text-lg font-bold text-slate-900 dark:text-white">A. Strictly Essential Technical Cookies</h3>
+      <p class="leading-relaxed">
+        These cookies and storage tokens are necessary for our website to function properly and securely. Because our site operates on the Cloudflare edge network, security tokens (such as <code>__cf_bm</code> and bot mitigation cookies) distinguish authentic human readers from malicious automated scrapers. Additionally, we use browser <code>localStorage</code> to store your theme selection (Dark Mode / Light Mode) and your cookie consent decision so you are not disrupted repeatedly. Strictly essential cookies do not track your browsing history across other domains and cannot be deactivated.
+      </p>
+
+      <h3 class="text-lg font-bold text-slate-900 dark:text-white">B. Analytical & Performance Optimization Cookies</h3>
+      <p class="leading-relaxed">
+        Performance cookies collect aggregated, anonymous telemetry regarding page loading speeds, First Contentful Paint (FCP), Core Web Vitals, and server routing performance via Cloudflare Web Analytics. These analytical tools measure network latency and cache hit ratios without harvesting personal identifying information, IP addresses, or cross-site tracking profiles.
+      </p>
+
+      <h3 class="text-lg font-bold text-slate-900 dark:text-white">C. Advertising & Google AdSense Partner Cookies</h3>
+      <p class="leading-relaxed">
+        To support our independent movie critiques, investigative film journalism, and real-time box office analytics without charging reader paywalls, TG Movies partners with authorized advertising networks, including Google AdSense:
+      </p>
+      <ul class="list-disc pl-5 space-y-2 text-xs sm:text-sm">
+        <li><strong>Google DoubleClick DART Cookies:</strong> Google utilizes DART cookies to serve contextual and interest-based advertisements to users based on their visits to TG Movies and other destinations across the Internet.</li>
+        <li><strong>Targeting & Frequency Capping:</strong> These cookies prevent the same banner advertisement from displaying repeatedly and tailor ad creatives to relevant audience interests.</li>
+        <li><strong>Opt-Out Options:</strong> Readers can decline or customize interest-based advertising preferences at any time by visiting Google's official Ad Settings page at <a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer" class="text-sky-600 hover:underline">adssettings.google.com</a> or via the Digital Advertising Alliance consumer choice portal at <a href="https://optout.aboutads.info/" target="_blank" rel="noopener noreferrer" class="text-sky-600 hover:underline">aboutads.info</a>.</li>
+      </ul>
+
+      <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white pt-4 border-t border-slate-200 dark:border-slate-800">
+        3. Comprehensive Cookie Inventory
+      </h2>
+      <div class="overflow-x-auto my-4 not-prose">
+        <table class="w-full text-xs text-left border border-slate-200 dark:border-slate-800">
+          <thead class="bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white font-bold uppercase">
+            <tr>
+              <th class="p-2.5 border-b border-slate-200 dark:border-slate-700">Cookie / Key</th>
+              <th class="p-2.5 border-b border-slate-200 dark:border-slate-700">Provider</th>
+              <th class="p-2.5 border-b border-slate-200 dark:border-slate-700">Purpose</th>
+              <th class="p-2.5 border-b border-slate-200 dark:border-slate-700">Duration</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 dark:divide-slate-800">
+            <tr>
+              <td class="p-2.5 font-mono text-sky-600 dark:text-sky-400">theme</td>
+              <td class="p-2.5">TG Movies (Local)</td>
+              <td class="p-2.5">Stores user preference for Dark or Light theme</td>
+              <td class="p-2.5">Persistent</td>
+            </tr>
+            <tr>
+              <td class="p-2.5 font-mono text-sky-600 dark:text-sky-400">cookie_consent</td>
+              <td class="p-2.5">TG Movies (Local)</td>
+              <td class="p-2.5">Remembers reader's cookie consent acceptance</td>
+              <td class="p-2.5">1 Year</td>
+            </tr>
+            <tr>
+              <td class="p-2.5 font-mono text-sky-600 dark:text-sky-400">__cf_bm</td>
+              <td class="p-2.5">Cloudflare</td>
+              <td class="p-2.5">Bot management & DDoS edge network security</td>
+              <td class="p-2.5">30 Minutes</td>
+            </tr>
+            <tr>
+              <td class="p-2.5 font-mono text-sky-600 dark:text-sky-400">__gads / _ga</td>
+              <td class="p-2.5">Google LLC</td>
+              <td class="p-2.5">AdSense frequency capping and anonymous ad measurement</td>
+              <td class="p-2.5">13 Months</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white pt-4 border-t border-slate-200 dark:border-slate-800">
+        4. Managing & Disabling Cookies in Your Web Browser
+      </h2>
+      <p class="leading-relaxed">
+        Most web browsers (Google Chrome, Mozilla Firefox, Apple Safari, Microsoft Edge) accept cookies by default. You can modify your browser settings to decline all cookies, block third-party cookies specifically, or notify you whenever a cookie is offered. Please consult the official help documentation of your browser:
+      </p>
+      <ul class="list-disc pl-5 space-y-1 text-xs sm:text-sm">
+        <li><strong>Google Chrome:</strong> Settings → Privacy and Security → Third-party cookies</li>
+        <li><strong>Mozilla Firefox:</strong> Settings → Privacy & Security → Enhanced Tracking Protection</li>
+        <li><strong>Apple Safari:</strong> Preferences → Privacy → Block all cookies</li>
+        <li><strong>Microsoft Edge:</strong> Settings → Cookies and site permissions</li>
+      </ul>
+      <p class="leading-relaxed">
+        Please note that blocking essential cookies may impact certain interface styling choices or require you to reset theme preferences on every visit.
+      </p>
+
+      <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white pt-4 border-t border-slate-200 dark:border-slate-800">
+        5. Contact Our Privacy & Compliance Desk
+      </h2>
+      <p class="leading-relaxed">
+        If you have questions regarding our cookie practices, data retention, or would like to request technical clarification, contact Chief Editor Aman Alria at <a href="mailto:amanalha07@gmail.com" class="text-sky-600 hover:underline">amanalha07@gmail.com</a>. You may also review our complete <a href="/privacy-policy" class="text-sky-600 hover:underline">Privacy Policy</a> and <a href="/terms" class="text-sky-600 hover:underline">Terms of Service</a>.
+      </p>
+    </div>
+  </div>
+</BaseLayout>
+
+<script is:inline>
+  (function() {
+    const statusEl = document.getElementById('current-consent-status');
+    const resetBtn = document.getElementById('reset-consent-btn');
+    const acceptBtn = document.getElementById('accept-all-page-btn');
+
+    function updateDisplay() {
+      const consent = localStorage.getItem('cookie_consent');
+      if (consent === 'accepted') {
+        if (statusEl) {
+          statusEl.textContent = 'Accepted (All Cookies Enabled)';
+          statusEl.className = 'text-xs font-mono font-semibold text-emerald-600 dark:text-emerald-400';
+        }
+      } else if (consent === 'declined') {
+        if (statusEl) {
+          statusEl.textContent = 'Declined (Essential Only)';
+          statusEl.className = 'text-xs font-mono font-semibold text-amber-600 dark:text-amber-400';
+        }
+      } else {
+        if (statusEl) {
+          statusEl.textContent = 'Not Set (Default Essential Active)';
+          statusEl.className = 'text-xs font-mono font-semibold text-slate-500';
+        }
+      }
+    }
+
+    updateDisplay();
+
+    resetBtn?.addEventListener('click', () => {
+      localStorage.removeItem('cookie_consent');
+      updateDisplay();
+      alert('Cookie consent choice has been reset. The consent banner will reappear on your next page load.');
+    });
+
+    acceptBtn?.addEventListener('click', () => {
+      localStorage.setItem('cookie_consent', 'accepted');
+      updateDisplay();
+      alert('You have accepted all cookies. Preferences updated successfully.');
+    });
+  })();
+</script>
