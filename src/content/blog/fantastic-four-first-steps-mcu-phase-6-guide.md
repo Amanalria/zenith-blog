@@ -1,7 +1,7 @@
 ---
 title: "Fantastic Four First Steps Movie Release Date and MCU Phase 6 Guide: Marvel's Retro Future"
 description: "In-depth Fantastic Four First Steps movie release date and MCU Phase 6 guide detailing Pedro Pascal's cast, Galactus, retro 1960s Earth, and Doomsday ties."
-pubDate: 2026-09-25
+pubDate: 2024-09-26
 category: "Hollywood"
 tags: ["Fantastic Four", "Pedro Pascal", "MCU Phase 6", "Marvel", "Matt Shakman", "Galactus", "Movie Preview"]
 image: "/images/fantastic-four-first-steps-mcu-phase-6-guide.webp"
@@ -9,6 +9,10 @@ imageAlt: "Fantastic Four First Steps movie guide banner showing the retro-futur
 readTime: "9 min read"
 customSlug: "fantastic-four-first-steps-mcu-phase-6-guide"
 ---
+
+> [!IMPORTANT]
+> **Release Status: UPCOMING FILM (Currently Filming - Not Yet Released)**  
+> *The Fantastic Four: First Steps* began principal photography at Pinewood Studios on July 30, 2024 under director Matt Shakman. The film is officially scheduled to premiere in theaters worldwide on **July 25, 2025**.
 
 For over fifteen years, comic book historians and cinematic purists lamented that Marvel's legendary founding family had never received a truly definitive live-action adaptation. This detailed **Fantastic Four First Steps movie release date and MCU Phase 6 guide** breaks down how director Matt Shakman, Pedro Pascal, and Marvel Studios are rebooting the quartet inside a stunning, standalone retro-futuristic 1960s alternate Earth.
 

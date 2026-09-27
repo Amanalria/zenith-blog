@@ -1,7 +1,7 @@
 ---
 title: "Brad Pitt F1 Movie Release Date and Racing Film Breakdown: Kosinski's High-Octane Epic"
 description: "Comprehensive Brad Pitt F1 movie release date and racing film breakdown detailing Joseph Kosinski's real Grand Prix filming, Lewis Hamilton's role, and budget."
-pubDate: 2026-09-25
+pubDate: 2024-09-25
 category: "Hollywood"
 tags: ["Brad Pitt", "F1 Movie", "Formula 1", "Joseph Kosinski", "Lewis Hamilton", "Hollywood", "Movie Preview"]
 image: "/images/brad-pitt-f1-movie-formula-one-racing-guide.webp"
@@ -9,6 +9,10 @@ imageAlt: "Brad Pitt F1 movie guide banner featuring APXGP black and gold race c
 readTime: "9 min read"
 customSlug: "brad-pitt-f1-movie-racing-guide"
 ---
+
+> [!IMPORTANT]
+> **Release Status: UPCOMING FILM (In Production - Not Yet Released)**  
+> Directed by Joseph Kosinski (*Top Gun: Maverick*), *F1* is currently filming on location during live 2024 Formula 1 Grand Prix weekends. The film is scheduled to premiere in international theaters on **June 25, 2025** and in North America on **June 27, 2025**.
 
 When director Joseph Kosinski revitalized theatrical aerial spectacle with *Top Gun: Maverick*, Hollywood studios immediately sought to capture that same visceral, in-cockpit sensation on the ground. This detailed **Brad Pitt F1 movie release date and racing film breakdown** examines how Apple Original Films, Warner Bros., and seven-time Formula 1 World Champion Lewis Hamilton are staging the most ambitious racing movie ever recorded.
 

@@ -1,12 +1,17 @@
 ---
 title: "Chandu Champion Kartik Aaryan Biographical Review: Kabir Khan's Inspiring Sports Epic"
 description: "Comprehensive Chandu Champion movie review detailing Kartik Aaryan's physical transformation, Kabir Khan's direction, and Murlikant Petkar's true story."
-pubDate: 2026-09-24
+pubDate: 2024-09-24
 category: "Movie Reviews"
 author: "TG Movies Review Desk"
 image: "/images/chandu-champion-kartik-aaryan-biographical-review.webp"
 imageAlt: "Chandu Champion Kartik Aaryan biographical review banner with Olympic swimming scene"
 ---
+
+> [!NOTE]
+> **Release Status: THEATRICAL & OTT RELEASE (Theaters: June 14, 2024 • Prime Video: August 2024)**  
+> *Chandu Champion* directed by Kabir Khan debuted in movie theaters on **June 14, 2024**.
+
 The **Chandu Champion Kartik Aaryan biographical review** examines director Kabir Khan's stirring, meticulously crafted sports drama celebrating the extraordinary real-life journey of Murlikant Petkar, India's first Paralympic gold medalist.
 
 Starring Kartik Aaryan in a career-defining performance that required an astonishing physical and psychological metamorphosis, *Chandu Champion* chronicles how a determined village boy from Maharashtra survived nine bullet wounds in warfare to stand atop the global athletic podium.

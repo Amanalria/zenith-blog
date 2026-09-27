@@ -1,12 +1,17 @@
 ---
 title: "Avengers Secret Wars MCU Phase 6 Timeline News and Battleworld Analysis: Marvel's Multiverse Climax"
 description: "Comprehensive Avengers Secret Wars MCU Phase 6 timeline news detailing Russo Brothers, Battleworld lore, Hugh Jackman, and Robert Downey Jr.'s Doctor Doom."
-pubDate: 2026-09-26
+pubDate: 2024-09-27
 category: "Cinema News"
 author: "TG Movies News Desk"
 image: "/images/avengers-secret-wars-mcu-phase-6-timeline-news.webp"
 imageAlt: "Avengers Secret Wars MCU Phase 6 timeline news and Battleworld analysis banner"
 ---
+
+> [!IMPORTANT]
+> **Release Status: UPCOMING FILM (Not Yet Released)**  
+> *Avengers: Secret Wars* is currently in script development with writer Stephen McFeely and directors Anthony and Joe Russo. It is officially scheduled to release in movie theaters on **May 7, 2027**, concluding Phase 6 of the Marvel Cinematic Universe.
+
 The **Avengers Secret Wars MCU Phase 6 timeline news and Battleworld analysis** provides the definitive breakdown of Marvel Studios' grand Multiverse Saga finale, which promises to be the largest cinematic crossover event in motion picture history.
 
 Directed by the visionary Russo Brothers (Anthony and Joe Russo) and written by Stephen McFeely, *Avengers: Secret Wars* serves as the direct continuation of *Avengers: Doomsday*, bringing an end to Phase 6 and culminating over two decades of Marvel storytelling.

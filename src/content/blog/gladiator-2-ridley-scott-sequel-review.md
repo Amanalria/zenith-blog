@@ -1,7 +1,7 @@
 ---
 title: "Gladiator 2 Movie Review and Historical Sequel Breakdown: Ridley Scott Returns to Rome"
 description: "Comprehensive Gladiator 2 movie review and historical sequel breakdown detailing Paul Mescal, Denzel Washington, Colosseum naval battles, and box office impact."
-pubDate: 2026-09-19
+pubDate: 2024-09-22
 category: "Hollywood"
 tags: ["Gladiator 2", "Ridley Scott", "Paul Mescal", "Denzel Washington", "Movie Review", "Hollywood", "Historical Epic"]
 image: "/images/gladiator-2-ridley-scott-sequel-review.webp"
@@ -9,6 +9,10 @@ imageAlt: "Gladiator 2 movie review banner showing bloody Roman sands and Paul M
 readTime: "8 min read"
 customSlug: "gladiator-2-ridley-scott-sequel-review"
 ---
+
+> [!NOTE]
+> **Release Status: UPCOMING THEATRICAL RELEASE (Releasing November 15/22, 2024)**  
+> Ridley Scott's *Gladiator II* starring Paul Mescal and Denzel Washington releases internationally on **November 15, 2024** and in North America on **November 22, 2024**.
 
 Twenty-four years after Russell Crowe's Maximus Decimus Meridius bled out upon the Colosseum sands, Ridley Scott returns to the eternal city to resurrect the sword-and-sandal genre. This exhaustive **Gladiator 2 movie review and historical sequel breakdown** investigates whether the 86-year-old master filmmaker succeeded in capturing the operatic fury of his five-time Oscar-winning original.
 

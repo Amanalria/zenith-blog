@@ -1,12 +1,17 @@
 ---
 title: "Kalki 2898 AD Prabhas Sci-Fi Box Office Analysis and Mahabharata Lore Breakdown: Nag Ashwin's Vision"
 description: "In-depth Kalki 2898 AD Prabhas sci-fi box office analysis detailing Nag Ashwin's direction, Amitabh Bachchan's Ashwatthama, and dystopian world-building."
-pubDate: 2026-09-25
+pubDate: 2024-09-25
 category: "South Cinema"
 author: "TG Movies South Cinema Desk"
 image: "/images/kalki-2898-ad-prabhas-sci-fi-box-office-analysis.webp"
 imageAlt: "Kalki 2898 AD Prabhas sci-fi box office analysis and Mahabharata lore banner"
 ---
+
+> [!NOTE]
+> **Release Status: THEATRICAL BLOCKBUSTER (Released June 27, 2024)**  
+> Nag Ashwin's *Kalki 2898 AD* released in worldwide theaters on **June 27, 2024**, achieving over ₹1,040 crore gross globally.
+
 The **Kalki 2898 AD Prabhas sci-fi box office analysis** explores director Nag Ashwin's groundbreaking fusion of ancient Indian mythology with post-apocalyptic dystopian science fiction, which established a new visual paradigm for Indian cinema on the global stage.
 
 Starring Prabhas alongside Indian cinema icons Amitabh Bachchan, Kamal Haasan, and Deepika Padukone, *Kalki 2898 AD* earned over ₹1,040 crore worldwide, entering the elite pantheon of the highest-grossing Indian motion pictures in history.
