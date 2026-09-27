@@ -1,7 +1,7 @@
 ---
 title: "Avengers Secret Wars MCU Phase 6 Timeline News and Battleworld Analysis: Marvel's Multiverse Climax"
 description: "Comprehensive Avengers Secret Wars MCU Phase 6 timeline news detailing Russo Brothers, Battleworld lore, Hugh Jackman, and Robert Downey Jr.'s Doctor Doom."
-pubDate: 2024-09-27
+pubDate: 2026-09-27
 category: "Cinema News"
 author: "Aman Alria"
 authorRole: "Chief Editor & Film Journalist"
@@ -9,15 +9,16 @@ image: "/images/avengers-secret-wars-mcu-phase-6-timeline-news.webp"
 imageAlt: "Avengers Secret Wars MCU Phase 6 timeline news and Battleworld analysis banner"
 ---
 
-> [!IMPORTANT]
-> **Release Status: UPCOMING FILM (Not Yet Released)**  
-> *Avengers: Secret Wars* is currently in script development with writer Stephen McFeely and directors Anthony and Joe Russo. It is officially scheduled to release in movie theaters on **May 7, 2027**, concluding Phase 6 of the Marvel Cinematic Universe.
+<div class="my-6 p-4 rounded-xl border-l-4 border-sky-500 bg-sky-50 dark:bg-sky-950/40 text-sky-900 dark:text-sky-200 text-xs leading-relaxed">
+  <strong class="font-bold uppercase tracking-wider block text-sky-800 dark:text-sky-300 mb-1">UPCOMING FILM (Not Yet Released)</strong>
+  *Avengers: Secret Wars* is currently in script development with writer Stephen McFeely and directors Anthony and Joe Russo. It is officially scheduled to release in movie theaters on **December 17, 2027**, concluding Phase 6 of the Marvel Cinematic Universe.
+</div>
 
 The **Avengers Secret Wars MCU Phase 6 timeline news and Battleworld analysis** provides the definitive breakdown of Marvel Studios' grand Multiverse Saga finale, which promises to be the largest cinematic crossover event in motion picture history.
 
 Directed by the visionary Russo Brothers (Anthony and Joe Russo) and written by Stephen McFeely, *Avengers: Secret Wars* serves as the direct continuation of *Avengers: Doomsday*, bringing an end to Phase 6 and culminating over two decades of Marvel storytelling.
 
-Targeting a worldwide theatrical release on May 7, 2027, the film adapts Jonathan Hickman's legendary 2015 comic masterpiece, orchestrating the total collapse of the Marvel multiverse into a patchwork realm known as Battleworld.
+Targeting a worldwide theatrical release on December 17, 2027, the film adapts Jonathan Hickman's legendary 2015 comic masterpiece, orchestrating the total collapse of the Marvel multiverse into a patchwork realm known as Battleworld.
 
 ---
 
@@ -72,7 +73,7 @@ Film lovers interested in historical cinematic parallels will appreciate Ridley 
 ## Frequently Asked Questions (FAQ)
 
 ### What is the official release date of Avengers: Secret Wars?
-*Avengers: Secret Wars* is scheduled for worldwide theatrical release on May 7, 2027, in IMAX, Dolby Cinema, 3D, and standard theatrical formats.
+*Avengers: Secret Wars* is scheduled for worldwide theatrical release on December 17, 2027, in IMAX, Dolby Cinema, 3D, and standard theatrical formats.
 
 ### Who is directing Avengers: Secret Wars?
 Anthony and Joe Russo (the Russo Brothers) are directing both *Avengers: Doomsday* and *Avengers: Secret Wars*, with longtime collaborator Stephen McFeely penning the screenplays.

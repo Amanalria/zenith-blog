@@ -1,7 +1,7 @@
 ---
 title: "Manjummel Boys Survival Thriller Film Analysis: Chidambaram's Malayalam Industry Record Breaker"
 description: "Comprehensive Manjummel Boys survival thriller film analysis detailing Chidambaram's direction, the true Guna Caves rescue, and ₹240 crore box office record."
-pubDate: 2024-09-24
+pubDate: 2026-09-24
 category: "Movie Reviews"
 author: "Aman Alria"
 authorRole: "Chief Editor & Film Journalist"
@@ -9,9 +9,10 @@ image: "/images/manjummel-boys-survival-thriller-film-analysis.webp"
 imageAlt: "Manjummel Boys survival thriller film analysis banner with Guna Caves rescue operation"
 ---
 
-> [!NOTE]
-> **Release Status: ALL-TIME BLOCKBUSTER (Theaters: February 22, 2024 • Disney+ Hotstar: May 5, 2024)**  
-> *Manjummel Boys* released in theaters on **February 22, 2024**, grossing over ₹242 crore worldwide.
+<div class="my-6 p-4 rounded-xl border-l-4 border-emerald-500 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-900 dark:text-emerald-200 text-xs leading-relaxed">
+  <strong class="font-bold uppercase tracking-wider block text-emerald-800 dark:text-emerald-300 mb-1">ALL-TIME BLOCKBUSTER (Theaters: February 22, 2024 • Disney+ Hotstar: May 5, 2024)</strong>
+  *Manjummel Boys* released in theaters on **February 22, 2024**, grossing over ₹242 crore worldwide.
+</div>
 
 The **Manjummel Boys survival thriller film analysis** dissects director Chidambaram's masterpiece, which shattered all historical box office benchmarks to become the highest-grossing Malayalam film in cinema history with a worldwide gross exceeding ₹240 crore.
 

@@ -1,7 +1,7 @@
 ---
 title: "Wolfs Movie Review and Brad Pitt George Clooney Reunion Analysis: The Ultimate Fixer Comedy"
 description: "In-depth Wolfs movie review and Brad Pitt George Clooney reunion analysis detailing Jon Watts' neo-noir comedy, Venice premiere, and Apple TV+ viewership records."
-pubDate: 2024-09-27
+pubDate: 2026-09-27
 author: "Aman Alria"
 authorRole: "Chief Editor & Film Journalist"
 category: "Hollywood"
@@ -12,9 +12,10 @@ readTime: "8 min read"
 customSlug: "wolfs-movie-review-brad-pitt-george-clooney"
 ---
 
-> [!NOTE]
-> **Release Status: NOW STREAMING (Theatrical Release: September 20, 2024 • Apple TV+: September 27, 2024)**  
-> Jon Watts' *Wolfs* debuted in select US theaters on **September 20, 2024** and premiered globally on Apple TV+ on **September 27, 2024**.
+<div class="my-6 p-4 rounded-xl border-l-4 border-emerald-500 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-900 dark:text-emerald-200 text-xs leading-relaxed">
+  <strong class="font-bold uppercase tracking-wider block text-emerald-800 dark:text-emerald-300 mb-1">NOW STREAMING (Theatrical Release: September 20, 2024 • Apple TV+: September 27, 2024)</strong>
+  Jon Watts' *Wolfs* debuted in select US theaters on **September 20, 2024** and premiered globally on Apple TV+ on **September 27, 2024**.
+</div>
 
 Sixteen years after their unforgettable comedic exchanges in the Coen brothers' *Burn After Reading* and the iconic *Ocean's Eleven* trilogy, Hollywood's most charismatic leading men reunited for an electric nocturnal thriller. This comprehensive **Wolfs movie review and Brad Pitt George Clooney reunion analysis** evaluates how director Jon Watts crafted a taut, stylish neo-noir comedy that shattered all-time viewership records on Apple TV+.
 

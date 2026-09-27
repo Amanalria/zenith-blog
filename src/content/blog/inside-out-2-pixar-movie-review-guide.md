@@ -1,7 +1,7 @@
 ---
 title: "Inside Out 2 Movie Review and Psychological Analysis: Pixar's $1.69B Record Breaker"
 description: "In-depth Inside Out 2 movie review and psychological analysis exploring Anxiety, puberty emotions, the Sense of Self mechanism, and historic box office records."
-pubDate: 2024-09-23
+pubDate: 2026-09-23
 author: "Aman Alria"
 authorRole: "Chief Editor & Film Journalist"
 category: "Hollywood"
@@ -12,9 +12,10 @@ readTime: "8 min read"
 customSlug: "inside-out-2-pixar-movie-review-guide"
 ---
 
-> [!NOTE]
-> **Release Status: RECORD-BREAKING RELEASE (Released June 14, 2024)**  
-> Pixar's *Inside Out 2* released in theaters on **June 14, 2024**, grossing over $1.698 billion to become the highest-grossing animated film in cinema history.
+<div class="my-6 p-4 rounded-xl border-l-4 border-emerald-500 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-900 dark:text-emerald-200 text-xs leading-relaxed">
+  <strong class="font-bold uppercase tracking-wider block text-emerald-800 dark:text-emerald-300 mb-1">RECORD-BREAKING RELEASE (Released June 14, 2024)</strong>
+  Pixar's *Inside Out 2* released in theaters on **June 14, 2024**, grossing over $1.698 billion to become the highest-grossing animated film in cinema history.
+</div>
 
 When Pixar Animation Studios announced a sequel to its 2015 psychological masterpiece, skeptical animation historians questioned whether lightning could strike twice inside human psychology. This detailed **Inside Out 2 movie review and psychological analysis** reveals how director Kelsey Mann delivered the highest-grossing animated film in cinematic history by tackling the silent epidemic of teenage anxiety.
 

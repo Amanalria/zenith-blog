@@ -1,7 +1,7 @@
 ---
 title: "Stree 2 Movie Box Office Collection and Horror Comedy Universe Analysis: Sarkate Ka Aatank"
 description: "Comprehensive Stree 2 movie box office collection and horror comedy universe analysis detailing Shraddha Kapoor, Rajkummar Rao, Sarkata lore, and Maddock records."
-pubDate: 2024-09-26
+pubDate: 2026-09-26
 category: "Bollywood"
 author: "Aman Alria"
 authorRole: "Chief Editor & Film Journalist"
@@ -9,9 +9,10 @@ image: "/images/stree-2-movie-box-office-horror-comedy-universe.webp"
 imageAlt: "Stree 2 movie box office collection and horror comedy universe banner with Sarkata lore"
 ---
 
-> [!NOTE]
-> **Release Status: THEATRICAL BLOCKBUSTER (Released August 15, 2024)**  
-> *Stree 2* was released in theaters worldwide on **August 15, 2024** (Independence Day), achieving an all-time record gross of over ₹874 crore worldwide.
+<div class="my-6 p-4 rounded-xl border-l-4 border-emerald-500 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-900 dark:text-emerald-200 text-xs leading-relaxed">
+  <strong class="font-bold uppercase tracking-wider block text-emerald-800 dark:text-emerald-300 mb-1">THEATRICAL BLOCKBUSTER (Released August 15, 2024)</strong>
+  *Stree 2* was released in theaters worldwide on **August 15, 2024** (Independence Day), achieving an all-time record gross of over ₹874 crore worldwide.
+</div>
 
 The **Stree 2 movie box office collection** shattered historical benchmarks across Hindi cinema, cementing director Amar Kaushik's horror-comedy sequel as one of the most profitable and culturally defining blockbusters in Bollywood history. 
 

@@ -1,7 +1,7 @@
 ---
 title: "Superman 2025 Movie Release Date and DC Universe Reboot Breakdown: James Gunn's Vision"
 description: "In-depth Superman 2025 movie release date and DC Universe reboot breakdown detailing David Corenswet, Nicholas Hoult's Lex Luthor, and DCU Chapter One."
-pubDate: 2024-09-26
+pubDate: 2026-09-26
 author: "Aman Alria"
 authorRole: "Chief Editor & Film Journalist"
 category: "Hollywood"
@@ -12,9 +12,10 @@ readTime: "9 min read"
 customSlug: "superman-2025-james-gunn-dcu-reboot-guide"
 ---
 
-> [!IMPORTANT]
-> **Release Status: UPCOMING FILM (In Post-Production - Not Yet Released)**  
-> Director James Gunn officially completed principal photography for *Superman* in July 2024. The film is currently in visual effects and orchestral post-production, scheduled to hit theaters worldwide on **July 11, 2025**.
+<div class="my-6 p-4 rounded-xl border-l-4 border-sky-500 bg-sky-50 dark:bg-sky-950/40 text-sky-900 dark:text-sky-200 text-xs leading-relaxed">
+  <strong class="font-bold uppercase tracking-wider block text-sky-800 dark:text-sky-300 mb-1">UPCOMING FILM (In Post-Production - Not Yet Released)</strong>
+  Director James Gunn officially completed principal photography for *Superman* in July 2024. The film is currently in visual effects and orchestral post-production, scheduled to hit theaters worldwide on **July 11, 2025**.
+</div>
 
 Following a decade of disjointed continuity, box office turbulence, and executive restructuring at Warner Bros. Discovery, the Man of Steel is stepping back into the solar spotlight. This detailed **Superman 2025 movie release date and DC Universe reboot breakdown** investigates how co-CEO James Gunn and star David Corenswet are constructing the foundational pillar for DC Studios' bold new cinematic universe.
 

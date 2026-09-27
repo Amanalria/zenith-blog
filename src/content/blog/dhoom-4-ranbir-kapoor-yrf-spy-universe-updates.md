@@ -1,7 +1,7 @@
 ---
 title: "Dhoom 4 Ranbir Kapoor Casting and YRF Franchise Reboot Updates: The Next Heist Chapter"
 description: "Comprehensive Dhoom 4 Ranbir Kapoor casting and YRF franchise reboot updates detailing Aditya Chopra's vision, Ayan Mukerji talks, and high-tech heist plans."
-pubDate: 2024-09-27
+pubDate: 2026-09-27
 category: "Cinema News"
 author: "Aman Alria"
 authorRole: "Chief Editor & Film Journalist"
@@ -9,9 +9,10 @@ image: "/images/dhoom-4-ranbir-kapoor-yrf-spy-universe-updates.webp"
 imageAlt: "Dhoom 4 Ranbir Kapoor casting and YRF franchise reboot updates banner"
 ---
 
-> [!IMPORTANT]
-> **Release Status: IN DEVELOPMENT / PRE-PRODUCTION (Not Yet Released)**  
-> *Dhoom 4* is currently in advanced pre-production with producer Aditya Chopra and director Ayan Mukerji. Ranbir Kapoor is cast as the lead antagonist thief. Filming is slated to commence in late 2025 with a theatrical release targeted for **late 2026 or 2027**.
+<div class="my-6 p-4 rounded-xl border-l-4 border-sky-500 bg-sky-50 dark:bg-sky-950/40 text-sky-900 dark:text-sky-200 text-xs leading-relaxed">
+  <strong class="font-bold uppercase tracking-wider block text-sky-800 dark:text-sky-300 mb-1">IN DEVELOPMENT / PRE-PRODUCTION (Not Yet Released)</strong>
+  *Dhoom 4* is currently in advanced pre-production with producer Aditya Chopra and director Ayan Mukerji. Ranbir Kapoor is cast as the lead antagonist thief. Filming is slated to commence in late 2025 with a theatrical release targeted for **late 2026 or 2027**.
+</div>
 
 The **Dhoom 4 Ranbir Kapoor casting and YRF franchise reboot updates** chronicle the historic revitalization of Indian cinema's most iconic action-heist franchise, as producer Aditya Chopra prepares to pass the mantle of the master thief to Ranbir Kapoor.
 

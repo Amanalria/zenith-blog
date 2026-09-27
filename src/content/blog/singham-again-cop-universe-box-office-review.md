@@ -1,7 +1,7 @@
 ---
 title: "Singham Again Cop Universe Box Office Review and Ramayana Allegory Breakdown: Rohit Shetty's Action Spectacle"
 description: "Comprehensive Singham Again cop universe box office review detailing Ajay Devgn, Akshay Kumar, Ranveer Singh, Deepika Padukone, and Ramayana parallels."
-pubDate: 2024-09-25
+pubDate: 2026-09-25
 category: "Bollywood"
 author: "Aman Alria"
 authorRole: "Chief Editor & Film Journalist"
@@ -9,9 +9,10 @@ image: "/images/singham-again-cop-universe-box-office-review.webp"
 imageAlt: "Singham Again cop universe box office review banner with Ajay Devgn and Rohit Shetty cast"
 ---
 
-> [!NOTE]
-> **Release Status: UPCOMING THEATRICAL RELEASE (Diwali Release: November 1, 2024)**  
-> *Singham Again* directed by Rohit Shetty and starring Ajay Devgn, Akshay Kumar, and Kareena Kapoor Khan is scheduled for a massive festive theatrical release on **November 1, 2024**.
+<div class="my-6 p-4 rounded-xl border-l-4 border-emerald-500 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-900 dark:text-emerald-200 text-xs leading-relaxed">
+  <strong class="font-bold uppercase tracking-wider block text-emerald-800 dark:text-emerald-300 mb-1">UPCOMING THEATRICAL RELEASE (Diwali Release: November 1, 2024)</strong>
+  *Singham Again* directed by Rohit Shetty and starring Ajay Devgn, Akshay Kumar, and Kareena Kapoor Khan is scheduled for a massive festive theatrical release on **November 1, 2024**.
+</div>
 
 The **Singham Again cop universe box office review** examines director Rohit Shetty's most ambitious cinematic cross-over to date, bringing together the largest ensemble of action superstars in modern Bollywood history.
 

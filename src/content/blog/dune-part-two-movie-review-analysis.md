@@ -1,7 +1,7 @@
 ---
 title: "Dune 2 Movie Review and Box Office Analysis: The Definitive Sci-Fi Guide"
 description: "In-depth Dune 2 movie review and box office analysis covering Denis Villeneuve's sci-fi epic, Arrakis lore, Paul Atreides' journey, and streaming details."
-pubDate: 2024-09-24
+pubDate: 2026-09-24
 author: "Aman Alria"
 authorRole: "Chief Editor & Film Journalist"
 category: "Hollywood"
@@ -12,9 +12,10 @@ readTime: "8 min read"
 customSlug: "dune-2-movie-review-box-office-analysis"
 ---
 
-> [!NOTE]
-> **Release Status: THEATRICAL MASTERPIECE (Released March 1, 2024)**  
-> Denis Villeneuve's *Dune: Part Two* released in worldwide theaters on **March 1, 2024**, achieving $714.4 million at the global box office.
+<div class="my-6 p-4 rounded-xl border-l-4 border-emerald-500 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-900 dark:text-emerald-200 text-xs leading-relaxed">
+  <strong class="font-bold uppercase tracking-wider block text-emerald-800 dark:text-emerald-300 mb-1">THEATRICAL MASTERPIECE (Released March 1, 2024)</strong>
+  Denis Villeneuve's *Dune: Part Two* released in worldwide theaters on **March 1, 2024**, achieving $714.4 million at the global box office.
+</div>
 
 When Denis Villeneuve accepted the task of adapting Frank Herbert's 1965 masterpiece, skeptic critics warned that the desert planet Arrakis was inherently unfilmable. This comprehensive **Dune 2 movie review and box office analysis** demonstrates how the second chapter demolished that skepticism, setting an untouchable benchmark for modern cinematic world-building.
 

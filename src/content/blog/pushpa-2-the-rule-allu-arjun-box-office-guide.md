@@ -1,7 +1,7 @@
 ---
 title: "Pushpa 2 The Rule Allu Arjun Box Office Guide and Theatrical Phenomenon: Sukumar's Mass Masterpiece"
 description: "Comprehensive Pushpa 2 The Rule Allu Arjun box office guide detailing Sukumar's direction, Bhanwar Singh Shekhawat rivalry, and pre-release business records."
-pubDate: 2024-09-26
+pubDate: 2026-09-26
 category: "South Cinema"
 author: "Aman Alria"
 authorRole: "Chief Editor & Film Journalist"
@@ -9,9 +9,10 @@ image: "/images/pushpa-2-the-rule-allu-arjun-box-office-guide.webp"
 imageAlt: "Pushpa 2 The Rule Allu Arjun box office guide and theatrical phenomenon banner"
 ---
 
-> [!NOTE]
-> **Release Status: UPCOMING THEATRICAL RELEASE (Releasing December 5, 2024)**  
-> *Pushpa 2: The Rule* directed by Sukumar and starring Allu Arjun is scheduled for a worldwide multi-language theatrical release on **December 5, 2024**.
+<div class="my-6 p-4 rounded-xl border-l-4 border-emerald-500 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-900 dark:text-emerald-200 text-xs leading-relaxed">
+  <strong class="font-bold uppercase tracking-wider block text-emerald-800 dark:text-emerald-300 mb-1">UPCOMING THEATRICAL RELEASE (Releasing December 5, 2024)</strong>
+  *Pushpa 2: The Rule* directed by Sukumar and starring Allu Arjun is scheduled for a worldwide multi-language theatrical release on **December 5, 2024**.
+</div>
 
 The **Pushpa 2 The Rule Allu Arjun box office guide** details the historic theatrical phenomenon surrounding director Sukumar's magnum opus, which stands as one of the most anticipated pan-Indian cinematic events of the decade.
 

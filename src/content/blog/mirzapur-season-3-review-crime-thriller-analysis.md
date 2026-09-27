@@ -1,7 +1,7 @@
 ---
 title: "Mirzapur Season 3 Review and Crime Thriller Analysis: The Battle for the Throne of Purvanchal"
 description: "Comprehensive Mirzapur Season 3 review and crime thriller analysis detailing Ali Fazal's Guddu Pandit, Pankaj Tripathi's Kaleen Bhaiya, and Season 4 setup."
-pubDate: 2024-09-25
+pubDate: 2026-09-27
 category: "OTT & Web Series"
 author: "Aman Alria"
 authorRole: "Chief Editor & Film Journalist"
@@ -9,9 +9,10 @@ image: "/images/mirzapur-season-3-review-crime-thriller-analysis.webp"
 imageAlt: "Mirzapur Season 3 review and crime thriller analysis banner with Guddu Pandit and Kaleen Bhaiya"
 ---
 
-> [!NOTE]
-> **Release Status: NOW STREAMING (Released July 5, 2024)**  
-> *Mirzapur Season 3* premiered all 10 episodes on Amazon Prime Video on **July 5, 2024**.
+<div class="my-6 p-4 rounded-xl border-l-4 border-emerald-500 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-900 dark:text-emerald-200 text-xs leading-relaxed">
+  <strong class="font-bold uppercase tracking-wider block text-emerald-800 dark:text-emerald-300 mb-1">NOW STREAMING (Released July 5, 2024)</strong>
+  *Mirzapur Season 3* premiered all 10 episodes on Amazon Prime Video on **July 5, 2024**.
+</div>
 
 The **Mirzapur Season 3 review and crime thriller analysis** dissects the brutal, high-stakes battle for the undisputed throne of Purvanchal, following the bloody aftermath of the Maqbool and Siwan massacres that concluded Season 2.
 
