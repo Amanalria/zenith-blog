@@ -18,6 +18,7 @@ export const siteConfig = {
   // Navigation links (Right-aligned in desktop header)
   nav: [
     { name: 'Home', href: '/' },
+    { name: 'Privacy Policy', href: '/privacy-policy' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
   ],

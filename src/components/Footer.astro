@@ -68,12 +68,14 @@ const currentYear = new Date().getFullYear();
       <div>
         © {currentYear} {siteConfig.name}. All rights reserved.
       </div>
-      <div class="flex items-center gap-4 text-xs">
+      <div class="flex flex-wrap items-center justify-center sm:justify-end gap-x-3 gap-y-2 text-xs">
         {siteConfig.legalLinks.map((link, idx) => (
-          <>
-            {idx > 0 && <span>•</span>}
-            <a href={link.href} class="hover:underline">{link.name}</a>
-          </>
+          <div class="flex items-center gap-3">
+            {idx > 0 && <span class="text-slate-300 dark:text-slate-700 hidden sm:inline">•</span>}
+            <a href={link.href} class="hover:text-sky-600 dark:hover:text-sky-400 hover:underline transition-colors whitespace-nowrap">
+              {link.name}
+            </a>
+          </div>
         ))}
       </div>
     </div>

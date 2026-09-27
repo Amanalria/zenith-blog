@@ -1,0 +1,37 @@
+---
+import IconTelegram from './icons/IconTelegram.astro';
+
+interface Props {
+  class?: string;
+}
+
+const telegramLink = "https://t.me/+ZgCjyUOiBm04NDll";
+---
+
+<div class={`my-8 p-5 sm:p-6 border border-sky-200 dark:border-sky-900/60 bg-gradient-to-r from-sky-50 via-sky-50/50 to-white dark:from-sky-950/40 dark:via-slate-900/60 dark:to-slate-900 rounded-none shadow-sm ${Astro.props.class || ''}`}>
+  <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+    <div class="flex items-center gap-3.5">
+      <div class="w-12 h-12 bg-sky-500 text-white flex items-center justify-center shrink-0 shadow-md">
+        <IconTelegram class="w-6 h-6" />
+      </div>
+      <div>
+        <h4 class="font-extrabold text-sm sm:text-base text-slate-900 dark:text-white leading-tight">
+          Join TG Movies on Telegram
+        </h4>
+        <p class="text-xs text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+          Get real-time box office alerts, breaking OTT drop notices, and unedited film reviews directly on your phone.
+        </p>
+      </div>
+    </div>
+    
+    <a
+      href={telegramLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="w-full sm:w-auto px-5 py-2.5 bg-sky-500 hover:bg-sky-600 active:scale-95 text-white font-bold text-xs uppercase tracking-wider transition-all text-center shrink-0 inline-flex items-center justify-center gap-2 shadow-sm"
+    >
+      <IconTelegram class="w-4 h-4" />
+      <span>Join Channel Free</span>
+    </a>
+  </div>
+</div>

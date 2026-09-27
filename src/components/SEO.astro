@@ -111,6 +111,9 @@ const schemaOrg = article
 <!-- Resource Hints & Preconnect for Edge Speed -->
 <link rel="dns-prefetch" href="https://static.cloudflareinsights.com" />
 <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin />
+{article && image && (
+  <link rel="preload" as="image" href={image} fetchpriority="high" />
+)}
 
 <!-- RSS Syndication, Sitemaps & AI Agent Manifest Autodiscovery -->
 <link rel="alternate" type="application/rss+xml" title={`${siteConfig.name} RSS Feed`} href="/rss.xml" />
