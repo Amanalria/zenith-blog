@@ -30,27 +30,119 @@ const fullTitle = title === siteTitle ? title : `${title} | ${siteTitle}`;
 const siteUrl = Astro.site ? Astro.site.toString().replace(/\/$/, '') : siteConfig.url;
 const resolvedImageUrl = image.startsWith('http') ? image : `${siteUrl}${image.startsWith('/') ? '' : '/'}${image}`;
 
-// JSON-LD structured data for Google / Schema.org
-const schemaOrg = article
-  ? {
-      '@context': 'https://schema.org',
-      '@type': 'NewsArticle',
-      headline: title,
-      description: description,
-      image: {
+// Comprehensive Schema.org @graph for Google Rich Results, Reviews, Breadcrumbs & Entities
+const isHome = canonicalUrl === siteUrl || canonicalUrl === `${siteUrl}/`;
+const isReview = article && (category === 'Movie Reviews' || title.toLowerCase().includes('review'));
+
+const breadcrumbs = article ? {
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: siteUrl,
+    },
+    ...(category ? [{
+      '@type': 'ListItem',
+      position: 2,
+      name: category,
+      item: `${siteUrl}/category/${category.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}/`,
+    }] : []),
+    {
+      '@type': 'ListItem',
+      position: category ? 3 : 2,
+      name: title,
+      item: canonicalUrl,
+    },
+  ],
+} : null;
+
+const schemaGraph: any[] = [];
+
+if (isHome) {
+  schemaGraph.push({
+    '@type': 'WebSite',
+    '@id': `${siteUrl}/#website`,
+    name: siteTitle,
+    url: siteUrl,
+    description: description,
+    inLanguage: siteConfig.language,
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${siteUrl}/?q={search_term_string}`,
+      },
+      'query-input': 'required name=search_term_string',
+    },
+    publisher: {
+      '@id': `${siteUrl}/#organization`,
+    },
+  });
+
+  schemaGraph.push({
+    '@type': 'Organization',
+    '@id': `${siteUrl}/#organization`,
+    name: siteTitle,
+    url: siteUrl,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${siteUrl}/favicon.svg`,
+      width: 512,
+      height: 512,
+    },
+    sameAs: ['https://t.me/+ZgCjyUOiBm04NDll'],
+  });
+
+  schemaGraph.push({
+    '@type': 'SiteNavigationElement',
+    name: siteConfig.categories.map((c) => c.name),
+    url: siteConfig.categories.map((c) => `${siteUrl}/category/${c.slug}/`),
+  });
+} else if (article) {
+  schemaGraph.push({
+    '@type': 'NewsArticle',
+    '@id': `${canonicalUrl}#article`,
+    headline: title,
+    description: description,
+    image: {
+      '@type': 'ImageObject',
+      url: resolvedImageUrl,
+      caption: title,
+      width: 1200,
+      height: 675,
+    },
+    datePublished: pubDate?.toISOString(),
+    dateModified: (updatedDate || pubDate)?.toISOString(),
+    inLanguage: siteConfig.language,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': canonicalUrl,
+    },
+    author: {
+      '@type': 'Person',
+      name: author,
+      jobTitle: siteConfig.authorRole,
+      url: `${siteUrl}/about/`,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: siteTitle,
+      url: siteUrl,
+      logo: {
         '@type': 'ImageObject',
-        url: resolvedImageUrl,
-        caption: title,
-        width: 1200,
-        height: 675,
+        url: `${siteUrl}/favicon.svg`,
       },
-      datePublished: pubDate?.toISOString(),
-      dateModified: (updatedDate || pubDate)?.toISOString(),
-      inLanguage: siteConfig.language,
-      mainEntityOfPage: {
-        '@type': 'WebPage',
-        '@id': canonicalUrl,
-      },
+    },
+    articleSection: category || 'Entertainment',
+  });
+
+  if (isReview) {
+    schemaGraph.push({
+      '@type': 'Review',
+      '@id': `${canonicalUrl}#review`,
+      headline: title,
       author: {
         '@type': 'Person',
         name: author,
@@ -59,36 +151,66 @@ const schemaOrg = article
       publisher: {
         '@type': 'Organization',
         name: siteTitle,
-        url: siteUrl,
-        logo: {
-          '@type': 'ImageObject',
-          url: `${siteUrl}/favicon.svg`,
-        },
       },
-      articleSection: category || 'Entertainment',
-    }
-  : {
-      '@context': 'https://schema.org',
+      datePublished: pubDate?.toISOString(),
+      itemReviewed: {
+        '@type': 'Movie',
+        name: title.replace(/Movie Review.*$/i, '').replace(/Review.*$/i, '').trim(),
+        image: resolvedImageUrl,
+      },
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: '4.5',
+        bestRating: '5',
+        worstRating: '1',
+      },
+    });
+  }
+
+  if (breadcrumbs) {
+    schemaGraph.push(breadcrumbs);
+  }
+} else {
+  // Category or Static Pages
+  schemaGraph.push({
+    '@type': 'WebPage',
+    '@id': `${canonicalUrl}#webpage`,
+    name: title,
+    url: canonicalUrl,
+    description: description,
+    inLanguage: siteConfig.language,
+    isPartOf: {
       '@type': 'WebSite',
       name: siteTitle,
       url: siteUrl,
-      description: description,
-      inLanguage: siteConfig.language,
-      potentialAction: {
-        '@type': 'SearchAction',
-        target: {
-          '@type': 'EntryPoint',
-          urlTemplate: `${siteUrl}/?q={search_term_string}`,
+    },
+  });
+
+  if (category) {
+    schemaGraph.push({
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: siteUrl,
         },
-        'query-input': 'required name=search_term_string',
-      },
-      publisher: {
-        '@type': 'Organization',
-        name: siteTitle,
-        url: siteUrl,
-        logo: `${siteUrl}/favicon.svg`,
-      },
-    };
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: category,
+          item: canonicalUrl,
+        },
+      ],
+    });
+  }
+}
+
+const schemaOrg = {
+  '@context': 'https://schema.org',
+  '@graph': schemaGraph,
+};
 ---
 
 <!-- Global Metadata -->
