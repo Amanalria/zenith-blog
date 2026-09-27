@@ -9,9 +9,9 @@ image: "/images/mirzapur-season-3-review-crime-thriller-analysis.webp"
 imageAlt: "Mirzapur Season 3 review and crime thriller analysis banner with Guddu Pandit and Kaleen Bhaiya"
 ---
 
-<div class="my-6 p-4 rounded-xl border-l-4 border-emerald-500 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-900 dark:text-emerald-200 text-xs leading-relaxed">
-  <strong class="font-bold uppercase tracking-wider block text-emerald-800 dark:text-emerald-300 mb-1">NOW STREAMING (Released July 5, 2024)</strong>
-  *Mirzapur Season 3* premiered all 10 episodes on Amazon Prime Video on **July 5, 2024**.
+<div class="my-6 p-4 rounded-xl border-l-4 border-rose-500 bg-rose-50 dark:bg-rose-950/40 text-rose-900 dark:text-rose-200 text-xs leading-relaxed">
+  <strong class="font-bold uppercase tracking-wider block text-rose-800 dark:text-rose-300 mb-1">Theatrical Sensation — Mirzapur: The Movie Crosses ₹328+ Crore Worldwide (Sept 2026)</strong>
+  Following the massive streaming run of <em>Mirzapur Season 3</em> on Amazon Prime Video, Excel Entertainment and Amazon MGM Studios brought the franchise to the big screen with <em>Mirzapur: The Movie</em>, which released in theaters on <strong>September 4, 2026</strong>. The film has earned over ₹225 crore net in India and ₹328 crore worldwide, uniting Pankaj Tripathi (Kaleen Bhaiya), Ali Fazal (Guddu Pandit), Divyenndu (Munna Bhaiya), and Jitendra Kumar.
 </div>
 
 The **Mirzapur Season 3 review and crime thriller analysis** dissects the brutal, high-stakes battle for the undisputed throne of Purvanchal, following the bloody aftermath of the Maqbool and Siwan massacres that concluded Season 2.
