@@ -11,13 +11,15 @@ export const siteConfig = {
   url: 'https://tgmovies.in', // Production domain
   author: 'Aman Alria',
   authorRole: 'Chief Editor & Film Journalist',
-  email: 'contact@tgmovies.in',
+  email: 'amanalha07@gmail.com',
   language: 'en',
   postsPerPage: 10,
   
-  // Navigation links (Right-aligned in desktop header) - Add your custom pages here!
+  // Navigation links (Right-aligned in desktop header)
   nav: [
     { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
   ],
 
   // Primary categories for movie portal
@@ -32,6 +34,8 @@ export const siteConfig = {
 
   // Footer legal links (AdSense & compliance)
   legalLinks: [
+    { name: 'About Us', href: '/about' },
+    { name: 'Contact Us', href: '/contact' },
     { name: 'Privacy Policy', href: '/privacy-policy' },
     { name: 'Terms of Service', href: '/terms' },
     { name: 'Disclaimer', href: '/disclaimer' },

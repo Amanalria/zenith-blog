@@ -15,9 +15,11 @@ export const GET: APIRoute = async ({ site }) => {
   // 1. Static Root and Compliance Pages
   const staticPages = [
     { url: '/', changefreq: 'daily', priority: '1.0', lastmod: nowIso },
-    { url: '/privacy-policy/', changefreq: 'monthly', priority: '0.3', lastmod: '2026-09-26T00:00:00.000Z' },
-    { url: '/terms/', changefreq: 'monthly', priority: '0.3', lastmod: '2026-09-26T00:00:00.000Z' },
-    { url: '/disclaimer/', changefreq: 'monthly', priority: '0.3', lastmod: '2026-09-26T00:00:00.000Z' },
+    { url: '/about/', changefreq: 'monthly', priority: '0.6', lastmod: nowIso },
+    { url: '/contact/', changefreq: 'monthly', priority: '0.6', lastmod: nowIso },
+    { url: '/privacy-policy/', changefreq: 'monthly', priority: '0.3', lastmod: nowIso },
+    { url: '/terms/', changefreq: 'monthly', priority: '0.3', lastmod: nowIso },
+    { url: '/disclaimer/', changefreq: 'monthly', priority: '0.3', lastmod: nowIso },
   ];
 
   // 2. Active Category Pages

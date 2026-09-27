@@ -1,54 +1,104 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { siteConfig } from '../config/site';
 ---
 
 <BaseLayout
-  title="Privacy Policy - Zenith Edge Journal"
-  description="Privacy Policy and data protection terms for Zenith Edge Journal readers and visitors."
+  title={`Privacy Policy - ${siteConfig.name} | Data Protection & Cookies`}
+  description="Official Privacy Policy for TG Movies. Learn how we collect, protect, and handle data in compliance with GDPR, CCPA, and Google AdSense guidelines."
 >
   <div class="max-w-4xl mx-auto px-4 sm:px-6 py-12 md:py-16">
+    <!-- Header -->
     <div class="border-b border-slate-200 dark:border-slate-800 pb-6 mb-8">
+      <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 mb-2">
+        <span>Legal & Regulatory Compliance</span>
+      </div>
       <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
         Privacy Policy
       </h1>
-      <p class="text-xs text-slate-500 mt-2">
-        Last updated: September 2026
+      <p class="text-sm text-slate-500 dark:text-slate-400 mt-2">
+        Effective Date: September 2026 • Last Reviewed: September 27, 2026
       </p>
     </div>
 
-    <div class="prose prose-slate dark:prose-invert max-w-none text-slate-700 dark:text-slate-300">
-      <p>
-        At Zenith Edge Journal, accessible from our domain, one of our main priorities is the privacy of our visitors. This Privacy Policy document outlines the types of information that is collected and recorded by our platform and how we use it.
+    <!-- Main Content -->
+    <div class="prose prose-slate dark:prose-invert max-w-none text-slate-700 dark:text-slate-300 space-y-6">
+      <p class="text-base sm:text-lg leading-relaxed text-slate-800 dark:text-slate-200 font-medium">
+        At <strong>TG Movies</strong> (accessible from <a href="https://tgmovies.in" class="text-sky-600 hover:underline">tgmovies.in</a>), protecting the privacy and personal data of our visitors is an absolute priority. This comprehensive Privacy Policy governs your use of our website and explains in clear, unambiguous detail what information we collect, why we collect it, how it is safeguarded, and the choices available to you regarding your personal information.
       </p>
 
-      <h2>1. Log Files</h2>
-      <p>
-        Zenith Edge Journal follows standard logging procedures. These logs include Internet Protocol (IP) addresses, browser type, Internet Service Provider (ISP), date/time stamps, referring/exit pages, and number of clicks. These are not linked to any information that is personally identifiable.
+      <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white pt-4 border-t border-slate-200 dark:border-slate-800">
+        1. Scope & Responsible Entity
+      </h2>
+      <p class="leading-relaxed">
+        This policy applies to all visitors, registered commenters, and consumers accessing services provided by TG Movies. The data controller responsible for the processing of personal data on this platform is <strong>Aman Alria</strong>, Chief Editor & Film Journalist, reachable directly via our registered administrative email at <a href="mailto:amanalha07@gmail.com" class="text-sky-600 hover:underline">amanalha07@gmail.com</a>. By browsing our website, submitting comments, or interacting with our content, you consent to the data practices described in this document.
       </p>
 
-      <h2>2. Cookies and Web Beacons</h2>
-      <p>
-        Like any other website, Zenith Edge Journal uses 'cookies'. These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited.
+      <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white pt-4 border-t border-slate-200 dark:border-slate-800">
+        2. Information We Collect
+      </h2>
+      <p class="leading-relaxed">
+        We collect only the minimum necessary information required to operate a secure, high-performance, and interactive cinema publication:
+      </p>
+      <ul class="list-disc pl-5 space-y-2 text-xs sm:text-sm">
+        <li><strong>Server Log Files & Network Diagnostics:</strong> Like most standard web servers and Content Delivery Networks (including Cloudflare), our infrastructure automatically records standard technical metadata when you access pages. This includes your Internet Protocol (IP) address, browser type and version, operating system, referring and exit pages, date and time stamps, and approximate geographic location (country or region level). These logs do not contain personally identifiable information and are utilized strictly for traffic analysis, DDoS prevention, and performance monitoring.</li>
+        <li><strong>Voluntary User Submissions (Comments & Contact):</strong> When you leave a comment on our movie reviews or use our contact form, you voluntarily provide your name, email address (optional for comments), and your submitted message. Your email address is never published publicly and is stored securely in our Cloudflare D1 database solely for comment authentication and spam prevention.</li>
+        <li><strong>Search Queries:</strong> Queries entered into our internal client-side search modal are processed locally within your browser and are not tied to your identity.</li>
+      </ul>
+
+      <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white pt-4 border-t border-slate-200 dark:border-slate-800">
+        3. Cookies, Web Beacons & Local Storage Technologies
+      </h2>
+      <p class="leading-relaxed">
+        TG Movies employs essential cookies and modern browser storage technologies (such as <code>localStorage</code>) to optimize your browsing journey:
+      </p>
+      <ul class="list-disc pl-5 space-y-2 text-xs sm:text-sm">
+        <li><strong>Theme Preferences:</strong> We use local storage to remember your chosen display theme (Dark Mode or Light Mode) across page transitions without requiring server round-trips.</li>
+        <li><strong>Cookie Consent Preference:</strong> A cookie stores your acknowledgment of our privacy standards so you are not repeatedly prompted on subsequent visits.</li>
+        <li><strong>Third-Party Analytical & CDN Cookies:</strong> Our hosting provider, Cloudflare, may place security and bot-detection cookies (such as <code>__cf_bm</code>) to differentiate human readers from automated scrapers.</li>
+      </ul>
+
+      <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white pt-4 border-t border-slate-200 dark:border-slate-800">
+        4. Google AdSense & Third-Party Advertising Partners
+      </h2>
+      <p class="leading-relaxed">
+        Third-party advertising vendors, including Google, serve advertisements on TG Movies to support our independent journalism:
+      </p>
+      <ul class="list-disc pl-5 space-y-2 text-xs sm:text-sm">
+        <li><strong>Google DART Cookies:</strong> Google uses cookies, including the DoubleClick DART cookie, to serve ads to our visitors based upon their visits to this site and other websites across the Internet.</li>
+        <li><strong>Opting Out:</strong> Visitors may choose to opt out of the use of the DART cookie for interest-based advertising by visiting the official Google Ad and Content Network Privacy Policy at <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer" class="text-sky-600 hover:underline">policies.google.com/technologies/ads</a> or through the Network Advertising Initiative at <a href="https://optout.networkadvertising.org/" target="_blank" rel="noopener noreferrer" class="text-sky-600 hover:underline">optout.networkadvertising.org</a>.</li>
+        <li><strong>Third-Party Ad Networks:</strong> These third-party ad networks automatically receive your IP address when ad units load. TG Movies has no access to or control over these cookies used by third-party advertisers.</li>
+      </ul>
+
+      <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white pt-4 border-t border-slate-200 dark:border-slate-800">
+        5. Data Protection Rights (GDPR & CCPA Compliance)
+      </h2>
+      <p class="leading-relaxed">
+        We respect user privacy worldwide and ensure all readers are entitled to the full range of data protection rights under the General Data Protection Regulation (GDPR), California Consumer Privacy Act (CCPA), and applicable global privacy statutes:
+      </p>
+      <ul class="list-disc pl-5 space-y-2 text-xs sm:text-sm">
+        <li><strong>The Right to Access:</strong> You have the right to request copies of your personal data held in our systems.</li>
+        <li><strong>The Right to Rectification:</strong> You may request corrections to any information you believe is inaccurate or incomplete.</li>
+        <li><strong>The Right to Erasure ("Right to be Forgotten"):</strong> You may request the permanent deletion of your comments and submitted email records at any time.</li>
+        <li><strong>The Right to Restrict & Object:</strong> You have the right to object to or restrict our processing of your personal data under certain legal conditions.</li>
+        <li><strong>Non-Discrimination:</strong> We will never deny services, alter content quality, or charge different rates if you exercise any of your privacy rights.</li>
+      </ul>
+      <p class="leading-relaxed">
+        To exercise any of these statutory rights, please contact our Data Protection desk at <a href="mailto:amanalha07@gmail.com" class="text-sky-600 hover:underline">amanalha07@gmail.com</a>. We will process and acknowledge your request within thirty (30) business days.
       </p>
 
-      <h2>3. Google DoubleClick DART Cookie & Third-Party Advertising</h2>
-      <p>
-        Google is one of a third-party vendor on our site. It also uses cookies, known as DART cookies, to serve ads to our site visitors based upon their visit to our site and other sites on the internet. Visitors may choose to decline the use of DART cookies by visiting the Google ad and content network Privacy Policy at the following URL: <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">https://policies.google.com/technologies/ads</a>.
+      <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white pt-4 border-t border-slate-200 dark:border-slate-800">
+        6. Children's Online Privacy Protection (COPPA)
+      </h2>
+      <p class="leading-relaxed">
+        Protecting the privacy of young children on the Internet is especially critical. TG Movies does not knowingly collect any personally identifiable information from children under the age of 13. If a parent or guardian believes that their child has provided personal information on our website, we strongly encourage you to contact us immediately at <a href="mailto:amanalha07@gmail.com" class="text-sky-600 hover:underline">amanalha07@gmail.com</a>, and we will promptly remove such records from our databases.
       </p>
 
-      <h2>4. Advertising Partners Privacy Policies</h2>
-      <p>
-        Third-party ad servers or ad networks use technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on Zenith Edge Journal. They automatically receive your IP address when this occurs. Zenith Edge Journal has no access to or control over these cookies that are used by third-party advertisers.
-      </p>
-
-      <h2>5. CCPA & GDPR Data Protection Rights</h2>
-      <p>
-        We would like to make sure you are fully aware of all of your data protection rights. Every user is entitled to request access, rectification, erasure, and restriction of personal data processing under applicable jurisdictions.
-      </p>
-
-      <h2>6. Consent</h2>
-      <p>
-        By using our website, you hereby consent to our Privacy Policy and agree to its Terms and Conditions.
+      <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white pt-4 border-t border-slate-200 dark:border-slate-800">
+        7. Security of Your Information & Updates
+      </h2>
+      <p class="leading-relaxed">
+        We employ enterprise-grade security protocols, including HTTPS TLS 1.3 encryption across all network transfers, global Edge protection via Cloudflare, and strict access controls on our Cloudflare D1 database. While no electronic transmission is 100% impenetrable, we review and update our safeguards continually. TG Movies reserves the right to amend this Privacy Policy periodically to reflect legal or technological advancements. Continued use of our site following revisions constitutes acceptance of the modified policy.
       </p>
     </div>
   </div>

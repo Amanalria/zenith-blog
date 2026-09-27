@@ -1,34 +1,88 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { siteConfig } from '../config/site';
 ---
 
 <BaseLayout
-  title="Disclaimer - Zenith Edge Journal"
-  description="Editorial and performance benchmark disclaimer for Zenith Edge Journal."
+  title={`Disclaimer - ${siteConfig.name} | Editorial Standards & Box Office Notice`}
+  description="Official Editorial and Box Office Disclaimer for TG Movies. Explaining our critical commentary, fair use doctrine, and trade data verification."
 >
   <div class="max-w-4xl mx-auto px-4 sm:px-6 py-12 md:py-16">
+    <!-- Header -->
     <div class="border-b border-slate-200 dark:border-slate-800 pb-6 mb-8">
+      <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 mb-2">
+        <span>Editorial & Analytical Notice</span>
+      </div>
       <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
-        Editorial & Technical Disclaimer
+        Disclaimer & Editorial Notice
       </h1>
-      <p class="text-xs text-slate-500 mt-2">
-        Last updated: September 2026
+      <p class="text-sm text-slate-500 dark:text-slate-400 mt-2">
+        Effective: September 2026 • Published by TG Movies Editorial Desk
       </p>
     </div>
 
-    <div class="prose prose-slate dark:prose-invert max-w-none text-slate-700 dark:text-slate-300">
-      <p>
-        The information provided by Zenith Edge Journal on this website is for general informational and educational purposes only. All information on the Site is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, or completeness of any information on the Site.
+    <!-- Main Content -->
+    <div class="prose prose-slate dark:prose-invert max-w-none text-slate-700 dark:text-slate-300 space-y-6">
+      <p class="text-base sm:text-lg leading-relaxed text-slate-800 dark:text-slate-200 font-medium">
+        The information, critical evaluations, release dates, streaming platform guides, and box office calculations published on <strong>TG Movies</strong> (<a href="https://tgmovies.in" class="text-sky-600 hover:underline">tgmovies.in</a>) are curated in good faith for general informational, educational, and entertainment purposes only. This Disclaimer outlines the boundaries of our critical opinions, data verification practices, and intellectual property usage.
       </p>
 
-      <h2>Professional Advice Disclaimer</h2>
-      <p>
-        The site cannot and does not contain financial, legal, or production architectural guarantees. The technological and coding information is provided for educational purposes only. Before executing production commands, always test in isolated staging environments.
+      <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white pt-4 border-t border-slate-200 dark:border-slate-800">
+        1. Nature of Film Reviews & Critical Commentary
+      </h2>
+      <p class="leading-relaxed">
+        Movie reviews, episodic television analyses, performance ratings, and aesthetic critiques published on TG Movies represent the subjective professional opinions of our authors, led by Chief Editor <strong>Aman Alria</strong>. While our evaluations adhere to strict editorial rubrics—judging narrative structure, cinematography, screenplay discipline, acoustic composition, and directorial execution—artistic appreciation remains inherently subjective.
+      </p>
+      <p class="leading-relaxed">
+        Our reviews are crafted to inform, inspire debate, and offer thoughtful perspective, but they should not be construed as definitive objective truths or personal reflections upon the character of any filmmaker, actor, or studio executive. Readers are encouraged to experience cinematic works directly and form their own independent perspectives.
       </p>
 
-      <h2>External Links Disclaimer</h2>
-      <p>
-        The Site may contain links to other websites or content belonging to or originating from third parties. Such external links are not investigated, monitored, or checked for accuracy by us.
+      <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white pt-4 border-t border-slate-200 dark:border-slate-800">
+        2. Box Office Figures & Financial Reporting Disclaimer
+      </h2>
+      <p class="leading-relaxed">
+        Box office receipts, opening day estimates, overseas earnings, and total theatrical gross reports published on our portal are compiled from reliable secondary and primary trade sources, including verified distributor statements, national multiplex chains (PVR INOX, Cinepolis), trade tracking services (Sacnilk, Bollywood Hungama, Box Office India), and international tracking agencies (Comscore, Box Office Mojo).
+      </p>
+      <p class="leading-relaxed">
+        While we apply rigorous methodology to ensure reported collections are authentic and current:
+      </p>
+      <ul class="list-disc pl-5 space-y-2 text-xs sm:text-sm">
+        <li>Early morning and evening estimates are subject to retrospective consolidation as territorial distributors finalize audited returns.</li>
+        <li>Variations frequently exist between Net Box Office Collections (after entertainment tax deductions) and Gross Worldwide revenues across different domestic circuits.</li>
+        <li>Financial tallies are provided for media journalism and entertainment reporting; they should never be utilized for commercial investment decisions, legal valuation, or contractual accounting.</li>
+      </ul>
+
+      <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white pt-4 border-t border-slate-200 dark:border-slate-800">
+        3. Fair Use & Trademark Ownership Notice
+      </h2>
+      <p class="leading-relaxed">
+        TG Movies does not claim ownership of any third-party movie titles, character names, character designs, franchise marks, promotional posters, teaser stills, or video trailers featured on our pages:
+      </p>
+      <ul class="list-disc pl-5 space-y-2 text-xs sm:text-sm">
+        <li>All trademarks, service marks, trade names, and copyrighted intellectual property belong to their respective corporate entities (such as Marvel Studios, Sony Pictures, Warner Bros. Discovery, Walt Disney Studios, Universal Pictures, Yash Raj Films, Dharma Productions, Lyca Productions, Hombale Films, Mythri Movie Makers, Netflix, Amazon MGM Studios, etc.).</li>
+        <li>The inclusion of these marks and promotional stills on TG Movies is done solely under the fair use provisions of applicable copyright law for the purposes of news reporting, criticism, scholarly commentary, and public education.</li>
+        <li>If you are a copyright owner or authorized representative and believe any material on our site exceeds the boundaries of fair use, please contact our rights desk directly at <a href="mailto:amanalha07@gmail.com" class="text-sky-600 hover:underline">amanalha07@gmail.com</a> for prompt resolution.</li>
+      </ul>
+
+      <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white pt-4 border-t border-slate-200 dark:border-slate-800">
+        4. External Hyperlinks & Outbound Verification
+      </h2>
+      <p class="leading-relaxed">
+        Articles on TG Movies frequently hyperlink to external websites, streaming platforms, database indices (such as IMDb and Wikipedia), and official social media handles. These external links are provided solely as contextual conveniences for our readers. TG Movies has no control over the nature, content, uptime, or availability of third-party domains. The inclusion of any outbound link does not imply endorsement of the views expressed within them.
+      </p>
+
+      <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white pt-4 border-t border-slate-200 dark:border-slate-800">
+        5. Theatrical Release Dates & Streaming Availability
+      </h2>
+      <p class="leading-relaxed">
+        Film release calendars and OTT platform availability dates are subject to sudden studio adjustments, regional distribution delays, theatrical window extensions, and festival timing changes. While TG Movies updates our schedule records frequently, readers are advised to check local cinema ticketing portals or official streaming applications to verify showtimes and geo-restricted catalog availability before making travel or viewing arrangements.
+      </p>
+
+      <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white pt-4 border-t border-slate-200 dark:border-slate-800">
+        6. Contact Regarding Editorial Clarifications
+      </h2>
+      <p class="leading-relaxed">
+        If you have questions, corrections, or constructive suggestions regarding any disclaimer, review statement, or data metric published on TG Movies, please reach out to our editorial desk at <a href="mailto:amanalha07@gmail.com" class="text-sky-600 hover:underline">amanalha07@gmail.com</a>.
       </p>
     </div>
   </div>

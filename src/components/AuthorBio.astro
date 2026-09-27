@@ -1,6 +1,4 @@
 ---
-import IconShield from './icons/IconShield.astro';
-
 interface Props {
   name?: string;
   role?: string;
@@ -22,13 +20,10 @@ const {
         <h3 class="font-bold text-base text-slate-900 dark:text-white">
           {name}
         </h3>
-        <span class="inline-flex items-center gap-1 text-[10px] font-semibold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800/50 px-2 py-0.5 rounded-full">
-          <IconShield class="w-3 h-3" /> Verified Author
+        <span class="text-xs text-sky-600 dark:text-sky-400 font-semibold">
+          • {role}
         </span>
       </div>
-      <p class="text-xs text-sky-600 dark:text-sky-400 font-medium">
-        {role}
-      </p>
       <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed pt-1">
         Specializing in verified cinema news, box office analytics, in-depth film retrospectives, and OTT streaming releases. All reviews and editorial reports are based on factual data and verified sources.
       </p>

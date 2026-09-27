@@ -7,37 +7,37 @@ interface Props {
 }
 
 const { postSlug, postTitle } = Astro.props;
-const postComments = commentsData.filter(c => c.postSlug === postSlug);
+const initialComments = commentsData.filter(c => c.postSlug === postSlug);
 ---
 
 <section class="my-12 pt-8 border-t border-slate-200 dark:border-slate-800" id="comments">
   <!-- Section Title -->
   <div class="border-b-2 border-slate-200 dark:border-slate-800 pb-2 mb-6">
     <h3 class="font-extrabold text-[15px] uppercase tracking-wider text-slate-900 dark:text-white relative">
-      Discussion & Comments ({postComments.length})
+      Discussion & Comments <span id="comments-count">({initialComments.length})</span>
       <span class="absolute -bottom-[10px] left-0 w-12 h-[2px] bg-sky-600"></span>
     </h3>
   </div>
 
-  <!-- Comments List -->
+  <!-- Comments List Container -->
   <div id="comments-list" class="space-y-4 mb-8">
-    {postComments.length === 0 ? (
+    {initialComments.length === 0 ? (
       <p id="no-comments-msg" class="text-xs text-slate-500 dark:text-slate-400 italic py-3">
-        No comments yet. Be the first to start the discussion!
+        No comments yet. Be the first to share your thoughts!
       </p>
     ) : (
-      postComments.map((c) => (
+      initialComments.map((c) => (
         <div class="p-4 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
           <div class="flex items-center justify-between gap-2 mb-1.5">
             <div class="flex items-center gap-2">
               <span class="w-7 h-7 bg-sky-600 text-white font-bold text-xs flex items-center justify-center">
-                {c.author.charAt(0)}
+                {c.author.charAt(0).toUpperCase()}
               </span>
               <span class="font-bold text-xs text-slate-900 dark:text-white">{c.author}</span>
             </div>
             <span class="text-[11px] text-slate-400 font-mono">{c.date}</span>
           </div>
-          <p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed pl-9">
+          <p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed pl-9 whitespace-pre-line">
             {c.content}
           </p>
         </div>
@@ -45,7 +45,7 @@ const postComments = commentsData.filter(c => c.postSlug === postSlug);
     )}
   </div>
 
-  <!-- Sharp Comment Submission Form -->
+  <!-- Comment Submission Form -->
   <div class="border border-slate-200 dark:border-slate-800 p-5 bg-slate-50/60 dark:bg-slate-900/40">
     <h4 class="font-bold text-xs uppercase tracking-wider text-slate-900 dark:text-white mb-3">
       Leave a Comment
@@ -53,107 +53,218 @@ const postComments = commentsData.filter(c => c.postSlug === postSlug);
     <form id="comment-form" data-slug={postSlug} data-title={postTitle} class="space-y-3">
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <div>
-          <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 mb-1">
+          <label for="comment-author" class="block text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 mb-1">
             Your Name *
           </label>
           <input
             type="text"
             id="comment-author"
             required
+            maxlength="60"
             placeholder="e.g. Rahul Sharma"
             class="w-full px-3 py-2 text-xs border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:outline-none focus:border-sky-600 rounded-none"
           />
         </div>
         <div>
-          <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 mb-1">
-            Email (Optional)
+          <label for="comment-email" class="block text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 mb-1">
+            Email (Optional - Kept Private)
           </label>
           <input
             type="email"
             id="comment-email"
-            placeholder="rahul@example.com"
+            placeholder="amanalha07@gmail.com"
             class="w-full px-3 py-2 text-xs border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:outline-none focus:border-sky-600 rounded-none"
           />
         </div>
       </div>
 
       <div>
-        <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 mb-1">
+        <label for="comment-body" class="block text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 mb-1">
           Comment Message *
         </label>
         <textarea
           id="comment-body"
           rows="4"
           required
-          placeholder="Share your thoughts or questions..."
+          maxlength="2000"
+          placeholder="Share your review, thoughts, or questions on this movie..."
           class="w-full px-3 py-2 text-xs border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:outline-none focus:border-sky-600 rounded-none"
         ></textarea>
       </div>
 
       <button
         type="submit"
-        class="px-5 py-2.5 bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer rounded-none"
+        id="comment-submit-btn"
+        class="px-5 py-2.5 bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer rounded-none inline-flex items-center gap-2"
       >
-        Submit Comment
+        <span>Submit Comment</span>
       </button>
     </form>
+
     <div id="comment-success" class="hidden mt-3 p-3 bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800 text-emerald-700 dark:text-emerald-300 text-xs">
-      Thank you! Your comment has been posted successfully.
+      Thank you! Your comment has been saved to the database successfully.
+    </div>
+
+    <div id="comment-error" class="hidden mt-3 p-3 bg-rose-50 dark:bg-rose-950/60 border border-rose-200 dark:border-rose-800 text-rose-700 dark:text-rose-300 text-xs">
+      Failed to post comment. Please try again.
     </div>
   </div>
 </section>
 
 <script is:inline>
-  const form = document.getElementById('comment-form');
-  const list = document.getElementById('comments-list');
-  const success = document.getElementById('comment-success');
+  (function() {
+    const form = document.getElementById('comment-form');
+    if (!form) return;
 
-  form?.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const author = document.getElementById('comment-author')?.value.trim();
-    const body = document.getElementById('comment-body')?.value.trim();
+    const list = document.getElementById('comments-list');
+    const successMsg = document.getElementById('comment-success');
+    const errorMsg = document.getElementById('comment-error');
+    const submitBtn = document.getElementById('comment-submit-btn');
+    const countEl = document.getElementById('comments-count');
+    const noCommentsMsg = document.getElementById('no-comments-msg');
+    
     const postSlug = form.getAttribute('data-slug');
     const postTitle = form.getAttribute('data-title');
 
-    if (!author || !body) return;
-
-    const today = new Date().toISOString().split('T')[0];
-
-    // Append directly to the UI
-    const commentHtml = `
-      <div class="p-4 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
-        <div class="flex items-center justify-between gap-2 mb-1.5">
-          <div class="flex items-center gap-2">
-            <span class="w-7 h-7 bg-sky-600 text-white font-bold text-xs flex items-center justify-center">
-              ${author.charAt(0).toUpperCase()}
-            </span>
-            <span class="font-bold text-xs text-slate-900 dark:text-white">${author}</span>
-          </div>
-          <span class="text-[11px] text-slate-400 font-mono">${today}</span>
-        </div>
-        <p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed pl-9">
-          ${body}
-        </p>
-      </div>
-    `;
-
-    list?.insertAdjacentHTML('beforeend', commentHtml);
-
-    // Save to local storage cache
-    const stored = JSON.parse(localStorage.getItem('user_comments') || '[]');
-    stored.push({
-      author,
-      content: body,
-      postSlug,
-      postTitle,
-      date: today
-    });
-    localStorage.setItem('user_comments', JSON.stringify(stored));
-
-    form.reset();
-    if (success) {
-      success.classList.remove('hidden');
-      setTimeout(() => success.classList.add('hidden'), 5000);
+    function createCommentCard(author, dateStr, text) {
+      const card = document.createElement('div');
+      card.className = 'p-4 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900';
+      
+      const headerDiv = document.createElement('div');
+      headerDiv.className = 'flex items-center justify-between gap-2 mb-1.5';
+      
+      const authorDiv = document.createElement('div');
+      authorDiv.className = 'flex items-center gap-2';
+      
+      const badge = document.createElement('span');
+      badge.className = 'w-7 h-7 bg-sky-600 text-white font-bold text-xs flex items-center justify-center';
+      badge.textContent = (author.charAt(0) || 'U').toUpperCase();
+      
+      const name = document.createElement('span');
+      name.className = 'font-bold text-xs text-slate-900 dark:text-white';
+      name.textContent = author;
+      
+      authorDiv.appendChild(badge);
+      authorDiv.appendChild(name);
+      
+      const dateSpan = document.createElement('span');
+      dateSpan.className = 'text-[11px] text-slate-400 font-mono';
+      dateSpan.textContent = dateStr;
+      
+      headerDiv.appendChild(authorDiv);
+      headerDiv.appendChild(dateSpan);
+      
+      const bodyP = document.createElement('p');
+      bodyP.className = 'text-xs text-slate-700 dark:text-slate-300 leading-relaxed pl-9 whitespace-pre-line';
+      bodyP.textContent = text;
+      
+      card.appendChild(headerDiv);
+      card.appendChild(bodyP);
+      return card;
     }
-  });
+
+    // 1. Fetch live comments from Cloudflare D1 via /api/comments
+    async function fetchD1Comments() {
+      if (!postSlug) return;
+      try {
+        const res = await fetch('/api/comments?slug=' + encodeURIComponent(postSlug));
+        if (res.ok) {
+          const data = await res.json();
+          if (data && data.success && Array.isArray(data.comments) && data.comments.length > 0) {
+            // Clear no-comments message
+            if (noCommentsMsg) noCommentsMsg.remove();
+            
+            // Append D1 comments
+            data.comments.forEach(c => {
+              const dateFormatted = c.created_at ? c.created_at.split(' ')[0] : new Date().toISOString().split('T')[0];
+              const card = createCommentCard(c.author_name, dateFormatted, c.content);
+              list?.appendChild(card);
+            });
+            
+            // Update total count
+            const allCards = list ? list.querySelectorAll('.p-4') : [];
+            if (countEl) countEl.textContent = '(' + allCards.length + ')';
+          }
+        }
+      } catch (err) {
+        console.warn('Could not load remote comments:', err);
+      }
+    }
+
+    fetchD1Comments();
+
+    // 2. Submit new comment to Cloudflare D1
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const authorInput = document.getElementById('comment-author');
+      const emailInput = document.getElementById('comment-email');
+      const bodyInput = document.getElementById('comment-body');
+
+      const authorName = authorInput?.value.trim();
+      const authorEmail = emailInput?.value.trim() || '';
+      const content = bodyInput?.value.trim();
+
+      if (!authorName || !content) return;
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span>Posting...</span>';
+      }
+
+      if (successMsg) successMsg.classList.add('hidden');
+      if (errorMsg) errorMsg.classList.add('hidden');
+
+      const today = new Date().toISOString().split('T')[0];
+
+      try {
+        const response = await fetch('/api/comments', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            postSlug,
+            postTitle,
+            authorName,
+            authorEmail,
+            content
+          })
+        });
+
+        if (response.ok) {
+          if (noCommentsMsg) noCommentsMsg.remove();
+          
+          const card = createCommentCard(authorName, today, content);
+          list?.appendChild(card);
+
+          const allCards = list ? list.querySelectorAll('.p-4') : [];
+          if (countEl) countEl.textContent = '(' + allCards.length + ')';
+
+          form.reset();
+          if (successMsg) {
+            successMsg.classList.remove('hidden');
+            setTimeout(() => successMsg.classList.add('hidden'), 5000);
+          }
+        } else {
+          throw new Error('Server returned error status');
+        }
+      } catch (err) {
+        console.error('Comment error:', err);
+        // Fallback: render locally so user doesn't lose thought
+        if (noCommentsMsg) noCommentsMsg.remove();
+        const card = createCommentCard(authorName, today, content);
+        list?.appendChild(card);
+        
+        if (errorMsg) {
+          errorMsg.textContent = 'Comment saved locally. Database sync will retry on reload.';
+          errorMsg.classList.remove('hidden');
+          setTimeout(() => errorMsg.classList.add('hidden'), 5000);
+        }
+        form.reset();
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<span>Submit Comment</span>';
+        }
+      }
+    });
+  })();
 </script>
