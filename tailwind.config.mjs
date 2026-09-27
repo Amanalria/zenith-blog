@@ -25,17 +25,21 @@ export default {
       },
       fontFamily: {
         sans: [
-          'Inter',
           '-apple-system',
           'BlinkMacSystemFont',
-          '"Segoe UI"',
-          'Roboto',
+          '"SF Pro Display"',
+          '"SF Pro Text"',
+          '"Helvetica Neue"',
+          'Helvetica',
+          'Arial',
           'sans-serif'
         ],
         mono: [
-          'JetBrains Mono',
-          'ui-monospace',
           'SFMono-Regular',
+          'ui-monospace',
+          'Menlo',
+          'Monaco',
+          'Consolas',
           'monospace'
         ]
       }
