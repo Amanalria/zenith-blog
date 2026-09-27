@@ -2,7 +2,7 @@
 title: "Forgotten Island Movie Review and Animation Breakdown: DreamWorks Mythological Epic"
 description: "Comprehensive Forgotten Island movie review and animation breakdown detailing Joel Crawford direction, H.E.R. and Liza Soberano voice acting, and Philippine mythology."
 pubDate: 2026-09-26
-category: "Hollywood"
+category: "Movie Reviews"
 author: "Aman Alria"
 authorRole: "Chief Editor & Film Journalist"
 tags: ['Forgotten Island', 'DreamWorks', 'Animation', 'Movie Review', 'Box Office', 'HER', 'Liza Soberano']

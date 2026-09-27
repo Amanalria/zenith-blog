@@ -2,7 +2,7 @@
 title: "Heart of the Beast Movie Review and Box Office Analysis: Brad Pitt and David Ayer Brutal Wilderness Thriller"
 description: "Comprehensive Heart of the Beast movie review and box office analysis detailing Brad Pitt rugged performance, David Ayer direction, and Alaskan survival warfare."
 pubDate: 2026-09-26
-category: "Hollywood"
+category: "Movie Reviews"
 author: "Aman Alria"
 authorRole: "Chief Editor & Film Journalist"
 tags: ['Heart of the Beast', 'Brad Pitt', 'David Ayer', 'Action', 'Movie Review', 'Box Office']
